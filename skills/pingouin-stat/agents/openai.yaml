@@ -1,0 +1,7 @@
+interface:
+  display_name: "Pingouin Stat"
+  short_description: "End-to-end psychology stats workflow"
+  brand_color: "#1F7665"
+  default_prompt: "Use $pingouin-stat to clarify, route, approve, and report my Pingouin analysis."
+policy:
+  allow_implicit_invocation: true

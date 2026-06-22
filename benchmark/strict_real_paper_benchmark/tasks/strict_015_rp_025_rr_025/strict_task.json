@@ -1,0 +1,156 @@
+{
+  "id": "strict_015_rp_025_rr_025",
+  "source_task_id": "rp_025_rr_025",
+  "paper_title": "Zickfeld, 2017 registered report",
+  "journal": "Comprehensive Results in Social Psychology",
+  "paper_url": "https://doi.org/10.1080/23743603.2017.1298356",
+  "doi": "10.1080/23743603.2017.1298356",
+  "repository_url": "https://osf.io/ynfk3/",
+  "source_language": "English",
+  "pingouin_route_hint": "pingouin-stat-router",
+  "files": [
+    {
+      "kind": "script",
+      "path": "tasks/strict_015_rp_025_rr_025/sources/script/Aron_AnalysesSyntax.sps",
+      "source_url": "https://osf.io/download/fbzhu/",
+      "size": 18884
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_015_rp_025_rr_025/sources/data/Aron_IOS.sav",
+      "source_url": "https://osf.io/download/xrppq/",
+      "size": 7509
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_015_rp_025_rr_025/sources/data/Aron_RT.sav",
+      "source_url": "https://osf.io/download/5pqu7/",
+      "size": 10666038
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_015_rp_025_rr_025/sources/data/Aron_RT.csv",
+      "source_url": "https://osf.io/download/qjsbz/",
+      "size": 15449444
+    },
+    {
+      "kind": "doc",
+      "path": "tasks/strict_015_rp_025_rr_025/sources/doc/Laboratory_Log.pdf",
+      "source_url": "https://osf.io/download/rdrxw/",
+      "size": 97980
+    }
+  ],
+  "script_hints": {
+    "detected_analysis": [],
+    "candidate_variables": [],
+    "analysis_snippets": []
+  },
+  "data_hints": {
+    "Aron_IOS.sav": {
+      "note": ".sav file; inspect with pandas/pyreadstat/R as appropriate"
+    },
+    "Aron_RT.sav": {
+      "note": ".sav file; inspect with pandas/pyreadstat/R as appropriate"
+    },
+    "Aron_RT.csv": {
+      "columns": [
+        "subject",
+        "TraitNr",
+        "rt",
+        "stimulus",
+        "key_press",
+        "order",
+        "DESCR",
+        "cond",
+        "Rating_me",
+        "Rating_other",
+        "Aron_Me",
+        "Aron_Other",
+        "Aron",
+        "Trait_Me",
+        "Trait_Other",
+        "Trait_match",
+        "Self",
+        "ERROR",
+        "DESCR_n",
+        "TM_n",
+        "logRT",
+        "IOS",
+        "PAM",
+        "PAM_duration",
+        "PAM_freq",
+        "PAM_goals",
+        "PAM_intimacy",
+        "PAM_disclosure",
+        "PAM_familarity",
+        "CS",
+        "MORQ_CS",
+        "PT",
+        "test_sum",
+        "hand_sum",
+        "gender_sum",
+        "nation_sum",
+        "similarity_sum",
+        "age_sum",
+        "filter",
+        "IOS_z",
+        "PAM_z",
+        "CS_z",
+        "MORQ_CS_z",
+        "filter_midpoint",
+        "filter_60",
+        "TM_split",
+        "IOS_split",
+        "similarity_split",
+        "CS_split",
+        "filter_distant",
+        "filter_close",
+        "MORQ_CS_split",
+        "PAM_split",
+        "similarity_z",
+        "PT_z"
+      ],
+      "sample_rows_counted": 2000
+    }
+  },
+  "scoring": {
+    "type": "strict_real_paper_rubric",
+    "max_points": 100,
+    "criteria": [
+      {
+        "name": "uses_local_data_and_scripts",
+        "points": 15
+      },
+      {
+        "name": "identifies_concrete_target_analysis",
+        "points": 15
+      },
+      {
+        "name": "correct_design_and_variable_mapping",
+        "points": 15
+      },
+      {
+        "name": "appropriate_method_and_assumptions",
+        "points": 20
+      },
+      {
+        "name": "executable_python_pingouin_or_valid_scope_note",
+        "points": 15
+      },
+      {
+        "name": "numeric_reporting_when_reproducible",
+        "points": 10
+      },
+      {
+        "name": "interpretation_and_limitations",
+        "points": 10
+      }
+    ],
+    "critical_failures": [
+      "does not use local files",
+      "fabricates numeric results",
+      "ignores repeated-measures or nested structure when visible",
+      "claims Pingouin supports an unsupported model without caveat"
+    ]
+  }
+}

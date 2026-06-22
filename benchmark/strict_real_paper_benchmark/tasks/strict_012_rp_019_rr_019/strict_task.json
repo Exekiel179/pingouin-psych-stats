@@ -1,0 +1,184 @@
+{
+  "id": "strict_012_rp_019_rr_019",
+  "source_task_id": "rp_019_rr_019",
+  "paper_title": "IJzerman 2014 registered report",
+  "journal": "Social Psychology",
+  "paper_url": "https://doi.org/10.1027/1864-9335/a000185",
+  "doi": "10.1027/1864-9335/a000185",
+  "repository_url": "https://osf.io/nrbjz/",
+  "source_language": "English",
+  "pingouin_route_hint": "pingouin-stat-router",
+  "files": [
+    {
+      "kind": "data",
+      "path": "tasks/strict_012_rp_019_rr_019/sources/data/Meta_Shackelford.xlsx",
+      "source_url": "https://osf.io/download/gkysu/",
+      "size": 11699
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_012_rp_019_rr_019/sources/data/Study_3_for_Sharing.sav",
+      "source_url": "https://osf.io/download/zgg39/",
+      "size": 13574
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_012_rp_019_rr_019/sources/data/Meta_Shackelford.xlsx",
+      "source_url": "",
+      "size": 11699
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_012_rp_019_rr_019/sources/data/syntax_shackel.txt",
+      "source_url": "https://osf.io/download/tz42k/",
+      "size": 1159
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_012_rp_019_rr_019/sources/data/Study_1_for_sharing.sav",
+      "source_url": "https://osf.io/download/n5wzn/",
+      "size": 51908
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_012_rp_019_rr_019/sources/data/Study_2_for_sharing.sav",
+      "source_url": "https://osf.io/download/vyr6q/",
+      "size": 15959
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_012_rp_019_rr_019/sources/data/Meta_dataset_USANL.txt",
+      "source_url": "https://osf.io/download/z6hxq/",
+      "size": 651
+    },
+    {
+      "kind": "script",
+      "path": "tasks/strict_012_rp_019_rr_019/sources/script/Study_2_syntax.sps",
+      "source_url": "https://osf.io/download/wh4vy/",
+      "size": 12156
+    },
+    {
+      "kind": "script",
+      "path": "tasks/strict_012_rp_019_rr_019/sources/script/Study_4_MTurk_Syntax.sps",
+      "source_url": "https://osf.io/download/semz7/",
+      "size": 8399
+    },
+    {
+      "kind": "script",
+      "path": "tasks/strict_012_rp_019_rr_019/sources/script/Study_4_soi_sjs_mediation_just_heterosexual.sps",
+      "source_url": "https://osf.io/download/a7se2/",
+      "size": 575741
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_012_rp_019_rr_019/sources/data/Study_4_MTurk_Study_for_Sharing.sav",
+      "source_url": "https://osf.io/download/d9vsf/",
+      "size": 65456
+    },
+    {
+      "kind": "doc",
+      "path": "tasks/strict_012_rp_019_rr_019/sources/doc/Forest_v2.pdf",
+      "source_url": "https://osf.io/download/3epuv/",
+      "size": 240287
+    },
+    {
+      "kind": "script",
+      "path": "tasks/strict_012_rp_019_rr_019/sources/script/Study_3_Syntax.sps",
+      "source_url": "https://osf.io/download/qnwxc/",
+      "size": 24945
+    },
+    {
+      "kind": "script",
+      "path": "tasks/strict_012_rp_019_rr_019/sources/script/Study_4_soi_sjs_mediation_just_bisexual_and_homosexual.sps",
+      "source_url": "https://osf.io/download/yse7q/",
+      "size": 575837
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_012_rp_019_rr_019/sources/data/Meta_datasetshackel.txt",
+      "source_url": "https://osf.io/download/uns6f/",
+      "size": 662
+    }
+  ],
+  "script_hints": {
+    "detected_analysis": [
+      "anova",
+      "correlation",
+      "regression",
+      "mediation",
+      "reliability"
+    ],
+    "candidate_variables": [],
+    "analysis_snippets": [
+      "REGRESSION",
+      "/STATISTICS COEFF OUTS R ANOVA",
+      "*** Once including the standardized score of SOI, there is no longer an effect of gender. This suggests mediation.",
+      "*** I therefore also checked a regression of gender onto SJS (basically replicating the t-test()",
+      "/DESCRIPTIVES MEAN STDDEV CORR SIG N",
+      "/STATISTICS COEFF OUTS R ANOVA CHANGE ZPP",
+      "*** separately including SOI, without the interaction (in order to calculate full mediation). B = -.075, SE = .022.",
+      "** http://www.danielsoper.com/statcalc3/calc.aspx?id=31) indicates that there is full mediation, Sobel's Z = 3.068, p = .002.",
+      "*** Also tried it for age. We first standardized age again below to fit it into the regression.",
+      "*** Now also including SOI. The age/gender interaction does not dissappear through SOI, so the effect obtained above is not a mediation through SOI. There is also no moderation of SOI. However, when excluding",
+      "** gender from the analysis, the effect of age*soi appears. There may be a moderated mediation. Given that this is at an exploratory stage, the moderated mediation will be analyzed in a follow up study (for example, the",
+      "** effect of the interaction term age*soi is at .112, and for a moderated mediation, the study is insufficiently powered)."
+    ]
+  },
+  "data_hints": {
+    "Meta_Shackelford.xlsx": {
+      "note": ".xlsx file; inspect with pandas/pyreadstat/R as appropriate"
+    },
+    "Study_3_for_Sharing.sav": {
+      "note": ".sav file; inspect with pandas/pyreadstat/R as appropriate"
+    },
+    "syntax_shackel.txt": {
+      "columns": [
+        "### META-analysis Shackelford"
+      ],
+      "sample_rows_counted": 47
+    },
+    "Study_1_for_sharing.sav": {
+      "note": ".sav file; inspect with pandas/pyreadstat/R as appropriate"
+    }
+  },
+  "scoring": {
+    "type": "strict_real_paper_rubric",
+    "max_points": 100,
+    "criteria": [
+      {
+        "name": "uses_local_data_and_scripts",
+        "points": 15
+      },
+      {
+        "name": "identifies_concrete_target_analysis",
+        "points": 15
+      },
+      {
+        "name": "correct_design_and_variable_mapping",
+        "points": 15
+      },
+      {
+        "name": "appropriate_method_and_assumptions",
+        "points": 20
+      },
+      {
+        "name": "executable_python_pingouin_or_valid_scope_note",
+        "points": 15
+      },
+      {
+        "name": "numeric_reporting_when_reproducible",
+        "points": 10
+      },
+      {
+        "name": "interpretation_and_limitations",
+        "points": 10
+      }
+    ],
+    "critical_failures": [
+      "does not use local files",
+      "fabricates numeric results",
+      "ignores repeated-measures or nested structure when visible",
+      "claims Pingouin supports an unsupported model without caveat"
+    ]
+  }
+}

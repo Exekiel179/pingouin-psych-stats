@@ -1,0 +1,144 @@
+{
+  "id": "strict_007_rp_010_rr_010",
+  "source_task_id": "rp_010_rr_010",
+  "paper_title": "Voorspoels 2014 registered report",
+  "journal": "Frontiers in Psychology",
+  "paper_url": "https://doi.org/10.3389/fpsyg.2014.01035",
+  "doi": "10.3389/fpsyg.2014.01035",
+  "repository_url": "https://osf.io/vnhrm/",
+  "source_language": "English",
+  "pingouin_route_hint": "pingouin-stat-router",
+  "files": [
+    {
+      "kind": "doc",
+      "path": "tasks/strict_007_rp_010_rr_010/sources/doc/VOORSPOELS_replication_raceerased_r.pdf",
+      "source_url": "https://osf.io/download/fkjx7/",
+      "size": 174879
+    },
+    {
+      "kind": "other",
+      "path": "tasks/strict_007_rp_010_rr_010/sources/other/OSF_README.rtf",
+      "source_url": "https://osf.io/download/tuxh5/",
+      "size": 55144
+    },
+    {
+      "kind": "doc",
+      "path": "tasks/strict_007_rp_010_rr_010/sources/doc/DETAILED_REPLICATION_PROPOSAL.pdf",
+      "source_url": "https://osf.io/download/75qpm/",
+      "size": 186368
+    },
+    {
+      "kind": "script",
+      "path": "tasks/strict_007_rp_010_rr_010/sources/script/power_race_erased.R",
+      "source_url": "https://osf.io/download/zxy8h/",
+      "size": 2092
+    },
+    {
+      "kind": "doc",
+      "path": "tasks/strict_007_rp_010_rr_010/sources/doc/DETAILED_REPLICATION_PROPOSAL_update_after_testruns.pdf",
+      "source_url": "https://osf.io/download/tdnkf/",
+      "size": 186368
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_007_rp_010_rr_010/sources/data/race_erased_replication2014.txt",
+      "source_url": "https://osf.io/download/r5uch/",
+      "size": 251438
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_007_rp_010_rr_010/sources/data/race_erased_replication2014.xls",
+      "source_url": "https://osf.io/download/9h6ur/",
+      "size": 3822592
+    },
+    {
+      "kind": "script",
+      "path": "tasks/strict_007_rp_010_rr_010/sources/script/data_preprocessing.R",
+      "source_url": "https://osf.io/download/h8ut5/",
+      "size": 5985
+    },
+    {
+      "kind": "script",
+      "path": "tasks/strict_007_rp_010_rr_010/sources/script/data_analyses.R",
+      "source_url": "https://osf.io/download/cj3x2/",
+      "size": 10239
+    },
+    {
+      "kind": "other",
+      "path": "tasks/strict_007_rp_010_rr_010/sources/other/race_erased.Rdata",
+      "source_url": "https://osf.io/download/v4gb5/",
+      "size": 14998
+    }
+  ],
+  "script_hints": {
+    "detected_analysis": [
+      "t_test"
+    ],
+    "candidate_variables": [
+      "coal_enc",
+      "condition",
+      "race_enc"
+    ],
+    "analysis_snippets": [
+      "pwr.t.test(n= , d=H1.dzp, sig.level=.05, power=.95 ,type=c(\"two.sample\"), alternative=c(\"greater\"))",
+      "pwr.t.test(n= , d=H2.dzp, sig.level=.05, power=.95 ,type=c(\"two.sample\"), alternative=c(\"greater\"))",
+      "H1 <- t.test(NOCUE_d$race_enc,CUE_d$race_enc,var.equal=TRUE, alternative=\"greater\")",
+      "H2 <- t.test(NOCUE_d$coal_enc,CUE_d$coal_enc,var.equal=FALSE, alternative=\"less\")",
+      "nc_race <- t.test(NOCUE_d$race_WC,NOCUE_d$race_BC,alternative=\"greater\",paired=TRUE)",
+      "nc_coalition <- t.test(NOCUE_d$coalition_WC,NOCUE_d$coalition_BC,alternative=\"greater\",paired=TRUE)",
+      "c_race <- t.test(CUE_d$race_WC,CUE_d$race_BC,alternative=\"greater\",paired=TRUE)",
+      "c_coalition <- t.test(CUE_d$coalition_WC,CUE_d$coalition_BC,alternative=\"greater\",paired=TRUE)"
+    ]
+  },
+  "data_hints": {
+    "race_erased_replication2014.txt": {
+      "columns": [
+        "start\tvisitor_nr\tIC\tcondition\tdisc1\tdisc2\tdisc3\tdisc4\tdisc5\tdisc6\tdisc7\tdisc8\tdisc9\tdisc10\tdisc11\tdisc12\tdisc13\tdisc14\tdisc15\tdisc16\tdisc17\tdisc18\tdisc19\tdisc20\tdisc21\tdisc22\tdisc23\tdisc24\ttestph1\ttestph2\ttestph3\ttestph4\ttestph5\ttestph6\ttestph7\ttestph8\tans_12\tans_13\tans_14\tans_15\tans_16\tans_17\tans_18\tans_19\tans_20\tans_21\tans_22\tans_23\tans_24\tans_25\tans_26\tans_27\tans_28\tans_29\tans_30\tans_31\tans_32\tans_33\tans_34\tans_35\tans_36\tans_37\tans_38\tsentence1\tsentence2\tsentence3\tsentence4\tsentence5\tsentence6\tsentence7\tsentence8\tsentence9\tsentence10\tsentence11\tsentence12\tsentence13\tsentence14\tsentence15\tsentence16\tsentence17\tsentence18\tsentence19\tsentence20\tsentence21\tsentence22\tsentence23\tsentence24\tGENDER\tAGE\tCOUNTRY\tETHNIC\tLANG\tans_71\tans_72\tans_73"
+      ],
+      "sample_rows_counted": 463
+    },
+    "race_erased_replication2014.xls": {
+      "note": ".xls file; inspect with pandas/pyreadstat/R as appropriate"
+    }
+  },
+  "scoring": {
+    "type": "strict_real_paper_rubric",
+    "max_points": 100,
+    "criteria": [
+      {
+        "name": "uses_local_data_and_scripts",
+        "points": 15
+      },
+      {
+        "name": "identifies_concrete_target_analysis",
+        "points": 15
+      },
+      {
+        "name": "correct_design_and_variable_mapping",
+        "points": 15
+      },
+      {
+        "name": "appropriate_method_and_assumptions",
+        "points": 20
+      },
+      {
+        "name": "executable_python_pingouin_or_valid_scope_note",
+        "points": 15
+      },
+      {
+        "name": "numeric_reporting_when_reproducible",
+        "points": 10
+      },
+      {
+        "name": "interpretation_and_limitations",
+        "points": 10
+      }
+    ],
+    "critical_failures": [
+      "does not use local files",
+      "fabricates numeric results",
+      "ignores repeated-measures or nested structure when visible",
+      "claims Pingouin supports an unsupported model without caveat"
+    ]
+  }
+}

@@ -1,0 +1,201 @@
+{
+  "id": "strict_016_rp_026_rr_026",
+  "source_task_id": "rp_026_rr_026",
+  "paper_title": "Evers 2014 registered report",
+  "journal": "Frontiers in Psychology",
+  "paper_url": "https://doi.org/10.3389/fpsyg.2014.00875",
+  "doi": "10.3389/fpsyg.2014.00875",
+  "repository_url": "https://osf.io/e6cr3/",
+  "source_language": "English",
+  "pingouin_route_hint": "pingouin-stat-router",
+  "files": [
+    {
+      "kind": "data",
+      "path": "tasks/strict_016_rp_026_rr_026/sources/data/ALL_DATA.xlsx",
+      "source_url": "https://osf.io/download/xt6gu/",
+      "size": 175241
+    },
+    {
+      "kind": "doc",
+      "path": "tasks/strict_016_rp_026_rr_026/sources/doc/Pre-registration.pdf",
+      "source_url": "https://osf.io/download/zbige/",
+      "size": 133547
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_016_rp_026_rr_026/sources/data/Classroom_Data_Faces_2012_and_2013.xlsx",
+      "source_url": "https://osf.io/download/xwmye/",
+      "size": 23082
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_016_rp_026_rr_026/sources/data/tversky_faces_eindhoven_SIMILARITY.sav",
+      "source_url": "https://osf.io/download/ksaej/",
+      "size": 6322
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_016_rp_026_rr_026/sources/data/tversky_faces_tilburg_CATEGORIZATION.sav",
+      "source_url": "https://osf.io/download/7g35y/",
+      "size": 2027
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_016_rp_026_rr_026/sources/data/faces_sad_eindhoven_SIMILARITY.xlsx",
+      "source_url": "https://osf.io/download/pn5ma/",
+      "size": 14524
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_016_rp_026_rr_026/sources/data/faces_happy_eindhoven_SIMILARITY.xlsx",
+      "source_url": "https://osf.io/download/ifw5k/",
+      "size": 14511
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_016_rp_026_rr_026/sources/data/mturk_tversky_faces_SIMILARITY_cleaned.sav",
+      "source_url": "https://osf.io/download/qm3xs/",
+      "size": 437035
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_016_rp_026_rr_026/sources/data/mturk_tversky_faces_CATEGORIZATION_cleaned.sav",
+      "source_url": "https://osf.io/download/m45fn/",
+      "size": 350535
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_016_rp_026_rr_026/sources/data/mturk_tversky_faces_SIMILARITY_raw.sav",
+      "source_url": "https://osf.io/download/z84mj/",
+      "size": 779074
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_016_rp_026_rr_026/sources/data/mturk_tversky_faces_CATEGORIZATION_raw.sav",
+      "source_url": "https://osf.io/download/qjkux/",
+      "size": 573097
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_016_rp_026_rr_026/sources/data/tversky_landen_tilburg_SIMILARITY.sav",
+      "source_url": "https://osf.io/download/mf9aj/",
+      "size": 22163
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_016_rp_026_rr_026/sources/data/Countries_eindhoven_B_India_CATEGORIZATION.xlsx",
+      "source_url": "https://osf.io/download/cn4jt/",
+      "size": 15909
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_016_rp_026_rr_026/sources/data/Countries_eindhoven_A_Hongarije_CATEGORIZATION.xlsx",
+      "source_url": "https://osf.io/download/tv7ks/",
+      "size": 16071
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_016_rp_026_rr_026/sources/data/mturk_tversky_landen_SIMILARITY_cleaned.sav",
+      "source_url": "https://osf.io/download/7dt2q/",
+      "size": 466747
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_016_rp_026_rr_026/sources/data/mturk_tversky_countries_CATEGORIZATION_cleaned.sav",
+      "source_url": "https://osf.io/download/sak8e/",
+      "size": 354433
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_016_rp_026_rr_026/sources/data/mturk_tversky_countries_SIMILARITY_raw.sav",
+      "source_url": "https://osf.io/download/b5wvx/",
+      "size": 817457
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_016_rp_026_rr_026/sources/data/mturk_tversky_countries_CATEGORIZATION_raw.sav",
+      "source_url": "https://osf.io/download/ztjw6/",
+      "size": 652298
+    },
+    {
+      "kind": "other",
+      "path": "tasks/strict_016_rp_026_rr_026/sources/other/Meta-Analysis.png",
+      "source_url": "https://osf.io/download/4qt3d/",
+      "size": 15286
+    },
+    {
+      "kind": "script",
+      "path": "tasks/strict_016_rp_026_rr_026/sources/script/meta_analysis.R",
+      "source_url": "https://osf.io/download/japzy/",
+      "size": 1430
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_016_rp_026_rr_026/sources/data/Meta-Analysis_Calculation_Cohens_d.xlsx",
+      "source_url": "https://osf.io/download/skci4/",
+      "size": 31401
+    }
+  ],
+  "script_hints": {
+    "detected_analysis": [],
+    "candidate_variables": [],
+    "analysis_snippets": []
+  },
+  "data_hints": {
+    "ALL_DATA.xlsx": {
+      "note": ".xlsx file; inspect with pandas/pyreadstat/R as appropriate"
+    },
+    "Classroom_Data_Faces_2012_and_2013.xlsx": {
+      "note": ".xlsx file; inspect with pandas/pyreadstat/R as appropriate"
+    },
+    "tversky_faces_eindhoven_SIMILARITY.sav": {
+      "note": ".sav file; inspect with pandas/pyreadstat/R as appropriate"
+    },
+    "tversky_faces_tilburg_CATEGORIZATION.sav": {
+      "note": ".sav file; inspect with pandas/pyreadstat/R as appropriate"
+    },
+    "faces_sad_eindhoven_SIMILARITY.xlsx": {
+      "note": ".xlsx file; inspect with pandas/pyreadstat/R as appropriate"
+    }
+  },
+  "scoring": {
+    "type": "strict_real_paper_rubric",
+    "max_points": 100,
+    "criteria": [
+      {
+        "name": "uses_local_data_and_scripts",
+        "points": 15
+      },
+      {
+        "name": "identifies_concrete_target_analysis",
+        "points": 15
+      },
+      {
+        "name": "correct_design_and_variable_mapping",
+        "points": 15
+      },
+      {
+        "name": "appropriate_method_and_assumptions",
+        "points": 20
+      },
+      {
+        "name": "executable_python_pingouin_or_valid_scope_note",
+        "points": 15
+      },
+      {
+        "name": "numeric_reporting_when_reproducible",
+        "points": 10
+      },
+      {
+        "name": "interpretation_and_limitations",
+        "points": 10
+      }
+    ],
+    "critical_failures": [
+      "does not use local files",
+      "fabricates numeric results",
+      "ignores repeated-measures or nested structure when visible",
+      "claims Pingouin supports an unsupported model without caveat"
+    ]
+  }
+}

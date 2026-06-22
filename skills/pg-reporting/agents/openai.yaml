@@ -1,0 +1,7 @@
+interface:
+  display_name: "PG Reporting"
+  short_description: "Write APA-style tables and result prose"
+  brand_color: "#1F7665"
+  default_prompt: "Use $pg-reporting to turn my Pingouin output into APA-style results."
+policy:
+  allow_implicit_invocation: true

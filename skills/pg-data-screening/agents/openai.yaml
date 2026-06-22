@@ -1,0 +1,7 @@
+interface:
+  display_name: "PG Data Screening"
+  short_description: "Check data shape, missingness, assumptions"
+  brand_color: "#1F7665"
+  default_prompt: "Use $pg-data-screening to inspect my dataset before running Pingouin analyses."
+policy:
+  allow_implicit_invocation: true

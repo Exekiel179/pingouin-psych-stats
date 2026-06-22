@@ -1,0 +1,7 @@
+interface:
+  display_name: "Pingouin Router"
+  short_description: "Pick the right psychology stats workflow"
+  brand_color: "#1F7665"
+  default_prompt: "Use $pingouin-stat-router to choose the right Pingouin analysis for my study design."
+policy:
+  allow_implicit_invocation: true

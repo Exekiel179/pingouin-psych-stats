@@ -1,0 +1,221 @@
+{
+  "id": "strict_019_rp_040_curated_osf_7wgv2",
+  "source_task_id": "rp_040_curated_osf_7wgv2",
+  "paper_title": "Robustness report: Arechar et al. (2023), Nature Human Behaviour",
+  "journal": "Nature Human Behaviour",
+  "paper_url": "",
+  "doi": "",
+  "repository_url": "https://osf.io/7wgv2/",
+  "source_language": "English",
+  "pingouin_route_hint": "pingouin-stat-router",
+  "files": [
+    {
+      "kind": "script",
+      "path": "tasks/strict_019_rp_040_curated_osf_7wgv2/sources/script/REP_supps-rev.Rmd",
+      "source_url": "https://osf.io/download/fcpbe/",
+      "size": 35307
+    },
+    {
+      "kind": "doc",
+      "path": "tasks/strict_019_rp_040_curated_osf_7wgv2/sources/doc/Fig1-rev2.pdf",
+      "source_url": "https://osf.io/download/695cab3d47b10ceb956dfdc4/",
+      "size": 172925
+    },
+    {
+      "kind": "script",
+      "path": "tasks/strict_019_rp_040_curated_osf_7wgv2/sources/script/Fig1-rev2.R",
+      "source_url": "https://osf.io/download/695cab3e7a7f33895e8a6593/",
+      "size": 8157
+    },
+    {
+      "kind": "doc",
+      "path": "tasks/strict_019_rp_040_curated_osf_7wgv2/sources/doc/Fig1-rev.pdf",
+      "source_url": "https://osf.io/download/kfbm2/",
+      "size": 70654
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_019_rp_040_curated_osf_7wgv2/sources/data/CR.csv",
+      "source_url": "https://osf.io/download/68ee20943ec33359f0bde913/",
+      "size": 10388608
+    },
+    {
+      "kind": "doc",
+      "path": "tasks/strict_019_rp_040_curated_osf_7wgv2/sources/doc/REP_supps-rev.pdf",
+      "source_url": "https://osf.io/download/gpumw/",
+      "size": 14849901
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_019_rp_040_curated_osf_7wgv2/sources/data/CR.csv",
+      "source_url": "",
+      "size": 10388608
+    },
+    {
+      "kind": "doc",
+      "path": "tasks/strict_019_rp_040_curated_osf_7wgv2/sources/doc/REP_supps.pdf",
+      "source_url": "https://osf.io/download/gwsmc/",
+      "size": 2681634
+    },
+    {
+      "kind": "script",
+      "path": "tasks/strict_019_rp_040_curated_osf_7wgv2/sources/script/REP_supps.Rmd",
+      "source_url": "https://osf.io/download/rp7sd/",
+      "size": 12694
+    },
+    {
+      "kind": "doc",
+      "path": "tasks/strict_019_rp_040_curated_osf_7wgv2/sources/doc/Fig1.pdf",
+      "source_url": "https://osf.io/download/68b0c414d31ca8423c7809a9/",
+      "size": 118119
+    }
+  ],
+  "script_hints": {
+    "detected_analysis": [
+      "reliability"
+    ],
+    "candidate_variables": [
+      "Condition",
+      "Country",
+      "Truth",
+      "value"
+    ],
+    "analysis_snippets": [
+      "ggdist::stat_halfeye(alpha = 0.7) + ylab(NULL) + theme_bw() +",
+      "size = 6, alpha = 0.8) +",
+      "width = 0.15, alpha = 0.8) +",
+      "alpha = 0.8,",
+      "boxplot.args = list(color = \"black\", outlier.shape = NA, show_guide = FALSE, alpha = 0.8),",
+      "violin.args = list(color = \"black\", outlier.shape = NA, alpha = 0.7),",
+      "point.args = list(show_guide = FALSE, alpha = 0)",
+      "show_guide = FALSE, alpha = 0.8,"
+    ]
+  },
+  "data_hints": {
+    "CR.csv": {
+      "columns": [
+        "id",
+        "Country",
+        "Condition",
+        "StartDate",
+        "Duration",
+        "pass_Screener1",
+        "fb",
+        "tw",
+        "sn",
+        "ig",
+        "wh",
+        "ti",
+        "ot",
+        "no",
+        "pass_Screener2",
+        "political",
+        "sports",
+        "celebrity",
+        "science",
+        "business",
+        "other",
+        "none",
+        "pass_Attention1",
+        "rating_1",
+        "rating_2",
+        "rating_3",
+        "rating_4",
+        "rating_5",
+        "rating_6",
+        "rating_7",
+        "rating_8",
+        "rating_9",
+        "rating_10",
+        "rating_11",
+        "rating_12",
+        "rating_13",
+        "rating_14",
+        "rating_15",
+        "rating_16",
+        "rating_17",
+        "rating_18",
+        "rating_19",
+        "rating_20",
+        "rating_21",
+        "rating_22",
+        "rating_23",
+        "rating_24",
+        "rating_25",
+        "rating_26",
+        "rating_27",
+        "rating_28",
+        "rating_29",
+        "rating_30",
+        "rating_31",
+        "rating_32",
+        "rating_33",
+        "rating_34",
+        "rating_35",
+        "rating_36",
+        "rating_37",
+        "rating_38",
+        "rating_39",
+        "rating_40",
+        "rating_41",
+        "rating_42",
+        "rating_43",
+        "rating_44",
+        "rating_45",
+        "CRT",
+        "CRTi",
+        "CRTw",
+        "pass_Attention2",
+        "imp_accuracy",
+        "imp_surprising",
+        "imp_interesting",
+        "imp_pol_aligned",
+        "imp_funny",
+        "vaccine1",
+        "vaccine2",
+        "best_worse"
+      ],
+      "sample_rows_counted": 2000
+    }
+  },
+  "scoring": {
+    "type": "strict_real_paper_rubric",
+    "max_points": 100,
+    "criteria": [
+      {
+        "name": "uses_local_data_and_scripts",
+        "points": 15
+      },
+      {
+        "name": "identifies_concrete_target_analysis",
+        "points": 15
+      },
+      {
+        "name": "correct_design_and_variable_mapping",
+        "points": 15
+      },
+      {
+        "name": "appropriate_method_and_assumptions",
+        "points": 20
+      },
+      {
+        "name": "executable_python_pingouin_or_valid_scope_note",
+        "points": 15
+      },
+      {
+        "name": "numeric_reporting_when_reproducible",
+        "points": 10
+      },
+      {
+        "name": "interpretation_and_limitations",
+        "points": 10
+      }
+    ],
+    "critical_failures": [
+      "does not use local files",
+      "fabricates numeric results",
+      "ignores repeated-measures or nested structure when visible",
+      "claims Pingouin supports an unsupported model without caveat"
+    ]
+  }
+}

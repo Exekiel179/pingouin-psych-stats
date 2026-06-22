@@ -1,0 +1,142 @@
+{
+  "id": "strict_004_rp_004_rr_004",
+  "source_task_id": "rp_004_rr_004",
+  "paper_title": "Dwyer 2017 registered report",
+  "journal": "Comprehensive Results in Social Psychology",
+  "paper_url": "https://doi.org/10.1080/23743603.2017.1376580",
+  "doi": "10.1080/23743603.2017.1376580",
+  "repository_url": "https://osf.io/23fd7/",
+  "source_language": "English",
+  "pingouin_route_hint": "pingouin-stat-router",
+  "files": [
+    {
+      "kind": "script",
+      "path": "tasks/strict_004_rp_004_rr_004/sources/script/HvM_Study_1_Syntax.sps",
+      "source_url": "https://osf.io/download/pv9w5/",
+      "size": 7236
+    },
+    {
+      "kind": "doc",
+      "path": "tasks/strict_004_rp_004_rr_004/sources/doc/MvH_S1_Survey.pdf",
+      "source_url": "https://osf.io/download/rp7cm/",
+      "size": 196124
+    },
+    {
+      "kind": "doc",
+      "path": "tasks/strict_004_rp_004_rr_004/sources/doc/MvH_S1_Survey_Coded.pdf",
+      "source_url": "https://osf.io/download/c2u79/",
+      "size": 106362
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_004_rp_004_rr_004/sources/data/HvM_Study_1_Data_2017-07-06.csv",
+      "source_url": "https://osf.io/download/4q78r/",
+      "size": 122811
+    }
+  ],
+  "script_hints": {
+    "detected_analysis": [
+      "anova",
+      "reliability"
+    ],
+    "candidate_variables": [],
+    "analysis_snippets": [
+      "/CRITERIA=ALPHA(.05)",
+      "*2-way ANOVA",
+      "/CRITERIA=ALPHA(0.05)"
+    ]
+  },
+  "data_hints": {
+    "HvM_Study_1_Data_2017-07-06.csv": {
+      "columns": [
+        "",
+        "start_time",
+        "end_time",
+        "Condition",
+        "HvM",
+        "Isolated",
+        "Time_Think",
+        "Time_Write",
+        "Good",
+        "Bad",
+        "Past",
+        "Present",
+        "Th_Fut",
+        "Im_Fut",
+        "Friends",
+        "Loved1s",
+        "Easy",
+        "Struggle",
+        "Needs",
+        "Wants",
+        "Helping",
+        "Positive",
+        "Negative",
+        "Stressed",
+        "Worried",
+        "Creative",
+        "Anxious",
+        "Reward",
+        "Giver",
+        "Taker",
+        "Prov_Mean",
+        "Prov_Hap",
+        "Def_Mean1_H",
+        "Def_Mean1_M",
+        "Def_Happ2_H",
+        "Def_Happ2_M",
+        "Match_Mean",
+        "Match_Happ",
+        "Different",
+        "Age",
+        "Gender",
+        "Ethnicity",
+        "Ethnicity_TEXT",
+        "Education",
+        "Income",
+        "Open"
+      ],
+      "sample_rows_counted": 273
+    }
+  },
+  "scoring": {
+    "type": "strict_real_paper_rubric",
+    "max_points": 100,
+    "criteria": [
+      {
+        "name": "uses_local_data_and_scripts",
+        "points": 15
+      },
+      {
+        "name": "identifies_concrete_target_analysis",
+        "points": 15
+      },
+      {
+        "name": "correct_design_and_variable_mapping",
+        "points": 15
+      },
+      {
+        "name": "appropriate_method_and_assumptions",
+        "points": 20
+      },
+      {
+        "name": "executable_python_pingouin_or_valid_scope_note",
+        "points": 15
+      },
+      {
+        "name": "numeric_reporting_when_reproducible",
+        "points": 10
+      },
+      {
+        "name": "interpretation_and_limitations",
+        "points": 10
+      }
+    ],
+    "critical_failures": [
+      "does not use local files",
+      "fabricates numeric results",
+      "ignores repeated-measures or nested structure when visible",
+      "claims Pingouin supports an unsupported model without caveat"
+    ]
+  }
+}

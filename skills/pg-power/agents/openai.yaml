@@ -1,0 +1,7 @@
+interface:
+  display_name: "PG Power"
+  short_description: "Plan sample size and detectable effects"
+  brand_color: "#1F7665"
+  default_prompt: "Use $pg-power to compute sample size or power for my planned study."
+policy:
+  allow_implicit_invocation: true

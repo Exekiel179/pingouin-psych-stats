@@ -1,0 +1,311 @@
+{
+  "id": "strict_002_rp_002_rr_002",
+  "source_task_id": "rp_002_rr_002",
+  "paper_title": "McCarthy 2017 registered report",
+  "journal": "Comprehensive Results in Social Psychology",
+  "paper_url": "https://doi.org/10.1080/23743603.2017.1378071",
+  "doi": "10.1080/23743603.2017.1378071",
+  "repository_url": "https://osf.io/ptmn6/",
+  "source_language": "English",
+  "pingouin_route_hint": "pingouin-stat-router",
+  "files": [
+    {
+      "kind": "script",
+      "path": "tasks/strict_002_rp_002_rr_002/sources/script/Heat-Aggression_AMP_Final_ms.Rmd",
+      "source_url": "",
+      "size": 49553
+    },
+    {
+      "kind": "script",
+      "path": "tasks/strict_002_rp_002_rr_002/sources/script/heat-aggression_AMP.R",
+      "source_url": "",
+      "size": 11445
+    },
+    {
+      "kind": "script",
+      "path": "tasks/strict_002_rp_002_rr_002/sources/script/heat-aggression_AMP_power_analysis.R",
+      "source_url": "",
+      "size": 1394
+    },
+    {
+      "kind": "other",
+      "path": "tasks/strict_002_rp_002_rr_002/sources/other/heat-aggression_AMP_power_analysis.bmp",
+      "source_url": "",
+      "size": 319670
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_002_rp_002_rr_002/sources/data/heat-aggression_AMP_pilot_data.csv",
+      "source_url": "",
+      "size": 39702
+    },
+    {
+      "kind": "script",
+      "path": "tasks/strict_002_rp_002_rr_002/sources/script/Heat-Aggression_AMP_Power_Analysis.R",
+      "source_url": "",
+      "size": 1394
+    },
+    {
+      "kind": "script",
+      "path": "tasks/strict_002_rp_002_rr_002/sources/script/heat-aggression_AMP_pilot.R",
+      "source_url": "",
+      "size": 9227
+    },
+    {
+      "kind": "other",
+      "path": "tasks/strict_002_rp_002_rr_002/sources/other/Heat-Aggression_AMP_Power_Analysis.bmp",
+      "source_url": "",
+      "size": 319670
+    },
+    {
+      "kind": "script",
+      "path": "tasks/strict_002_rp_002_rr_002/sources/script/Heat-Aggression_AMP_Pre-registration.R",
+      "source_url": "",
+      "size": 5736
+    },
+    {
+      "kind": "doc",
+      "path": "tasks/strict_002_rp_002_rr_002/sources/doc/Heat-Aggression_AMP_Pilot_Study_Preregistration.pdf",
+      "source_url": "",
+      "size": 125655
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_002_rp_002_rr_002/sources/data/heat-aggression_AMP_data.csv",
+      "source_url": "",
+      "size": 51563
+    },
+    {
+      "kind": "script",
+      "path": "tasks/strict_002_rp_002_rr_002/sources/script/Heat-Aggression_AMP-predata-IPA_ms.Rmd",
+      "source_url": "",
+      "size": 33873
+    }
+  ],
+  "script_hints": {
+    "detected_analysis": [
+      "anova"
+    ],
+    "candidate_variables": [
+      "ampRating",
+      "ampTrial",
+      "ampTrialDummy",
+      "perceived.prime"
+    ],
+    "analysis_snippets": [
+      "anova(trialType, trialTypePrime)"
+    ]
+  },
+  "data_hints": {
+    "heat-aggression_AMP_pilot_data.csv": {
+      "columns": [
+        "id",
+        "imc1",
+        "hos.att1",
+        "hos.att2",
+        "hos.att3",
+        "hos.att4",
+        "hos.att5",
+        "hos.att6",
+        "hos.att7",
+        "hos.att8",
+        "hos.att9",
+        "hos.att10",
+        "hos.att11",
+        "hos.att12",
+        "hos.att13",
+        "hos.att14",
+        "hos.att15",
+        "hos.att16",
+        "hos.att17",
+        "hos.att18",
+        "hos.att19",
+        "hos.att20",
+        "hos.att21",
+        "hos.att22",
+        "hos.att23",
+        "hos.att24",
+        "hos.att25",
+        "hos.att26",
+        "hos.att27",
+        "hos.att28",
+        "hos.att29",
+        "hos.att30",
+        "hos.att31",
+        "hos.att32",
+        "hos.att33",
+        "hos.att34",
+        "hos.att35",
+        "hos.att36",
+        "hos.att37",
+        "hos.att38",
+        "hos.att39",
+        "hos.att40",
+        "hos.att41",
+        "hos.att42",
+        "hos.att43",
+        "hos.att44",
+        "hos.att45",
+        "hos.att46",
+        "hos.att47",
+        "hos.att48",
+        "hos.att49",
+        "hos.att50",
+        "hos.att51",
+        "hos.att52",
+        "hos.att53",
+        "hos.att54",
+        "hos.att55",
+        "hos.att56",
+        "hos.att57",
+        "hos.att58",
+        "hos.att59",
+        "hos.att60",
+        "hos.att61",
+        "hos.att62",
+        "hos.att63",
+        "hos.att64",
+        "hos.att65",
+        "hos.att66",
+        "hos.att67",
+        "hos.att68",
+        "hos.att69",
+        "hos.att70",
+        "hos.att71",
+        "hos.att72",
+        "imc2",
+        "loudness.norm",
+        "loudness.blast",
+        "motive1",
+        "motive2",
+        "motive3"
+      ],
+      "sample_rows_counted": 111
+    },
+    "heat-aggression_AMP_data.csv": {
+      "columns": [
+        "id",
+        "imc1",
+        "hosAMP1",
+        "hosAMP2",
+        "hosAMP3",
+        "hosAMP4",
+        "hosAMP5",
+        "hosAMP6",
+        "hosAMP7",
+        "hosAMP8",
+        "hosAMP9",
+        "hosAMP10",
+        "hosAMP11",
+        "hosAMP12",
+        "hosAMP13",
+        "hosAMP14",
+        "hosAMP15",
+        "hosAMP16",
+        "hosAMP17",
+        "hosAMP18",
+        "hosAMP19",
+        "hosAMP20",
+        "hosAMP21",
+        "hosAMP22",
+        "hosAMP23",
+        "hosAMP24",
+        "kindAMP1",
+        "kindAMP2",
+        "kindAMP3",
+        "kindAMP4",
+        "kindAMP5",
+        "kindAMP6",
+        "kindAMP7",
+        "kindAMP8",
+        "kindAMP9",
+        "kindAMP10",
+        "kindAMP11",
+        "kindAMP12",
+        "kindAMP13",
+        "kindAMP14",
+        "kindAMP15",
+        "kindAMP16",
+        "kindAMP17",
+        "kindAMP18",
+        "kindAMP19",
+        "kindAMP20",
+        "kindAMP21",
+        "kindAMP22",
+        "kindAMP23",
+        "kindAMP24",
+        "hotAMP1",
+        "hotAMP2",
+        "hotAMP3",
+        "hotAMP4",
+        "hotAMP5",
+        "hotAMP6",
+        "hotAMP7",
+        "hotAMP8",
+        "hotAMP9",
+        "hotAMP10",
+        "hotAMP11",
+        "hotAMP12",
+        "hotAMP13",
+        "hotAMP14",
+        "hotAMP15",
+        "hotAMP16",
+        "hotAMP17",
+        "hotAMP18",
+        "hotAMP19",
+        "hotAMP20",
+        "hotAMP21",
+        "hotAMP22",
+        "hotAMP23",
+        "hotAMP24",
+        "coldAMP1",
+        "coldAMP2",
+        "coldAMP3",
+        "coldAMP4",
+        "coldAMP5",
+        "coldAMP6"
+      ],
+      "sample_rows_counted": 167
+    }
+  },
+  "scoring": {
+    "type": "strict_real_paper_rubric",
+    "max_points": 100,
+    "criteria": [
+      {
+        "name": "uses_local_data_and_scripts",
+        "points": 15
+      },
+      {
+        "name": "identifies_concrete_target_analysis",
+        "points": 15
+      },
+      {
+        "name": "correct_design_and_variable_mapping",
+        "points": 15
+      },
+      {
+        "name": "appropriate_method_and_assumptions",
+        "points": 20
+      },
+      {
+        "name": "executable_python_pingouin_or_valid_scope_note",
+        "points": 15
+      },
+      {
+        "name": "numeric_reporting_when_reproducible",
+        "points": 10
+      },
+      {
+        "name": "interpretation_and_limitations",
+        "points": 10
+      }
+    ],
+    "critical_failures": [
+      "does not use local files",
+      "fabricates numeric results",
+      "ignores repeated-measures or nested structure when visible",
+      "claims Pingouin supports an unsupported model without caveat"
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+interface:
+  display_name: "PG Approval"
+  short_description: "Review analysis before final reporting"
+  brand_color: "#1F7665"
+  default_prompt: "Use $pg-analysis-approval to check my Pingouin analysis before reporting."
+policy:
+  allow_implicit_invocation: true

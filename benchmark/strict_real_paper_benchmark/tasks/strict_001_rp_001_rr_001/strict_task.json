@@ -1,0 +1,172 @@
+{
+  "id": "strict_001_rp_001_rr_001",
+  "source_task_id": "rp_001_rr_001",
+  "paper_title": "Keller 2017 registered report",
+  "journal": "Comprehensive Results in Social Psychology",
+  "paper_url": "https://doi.org/10.1080/23743603.2017.1341186",
+  "doi": "10.1080/23743603.2017.1341186",
+  "repository_url": "https://osf.io/pke79/",
+  "source_language": "English",
+  "pingouin_route_hint": "pingouin-stat-router",
+  "files": [
+    {
+      "kind": "data",
+      "path": "tasks/strict_001_rp_001_rr_001/sources/data/Keller_et_al._2017_CRSP_Power_Poses_-_Raw_data.csv",
+      "source_url": "",
+      "size": 96167
+    },
+    {
+      "kind": "script",
+      "path": "tasks/strict_001_rp_001_rr_001/sources/script/Keller_et_al._2017_CRSP_Power_Poses_-_Analysis_script.R",
+      "source_url": "",
+      "size": 57978
+    }
+  ],
+  "script_hints": {
+    "detected_analysis": [
+      "anova",
+      "correlation",
+      "regression",
+      "reliability"
+    ],
+    "candidate_variables": [
+      "Gamble",
+      "aware",
+      "expansive",
+      "feelpower",
+      "mexpa_3",
+      "mhire_3",
+      "mperf_3",
+      "prior_aware"
+    ],
+    "analysis_snippets": [
+      "cor.test(df$powerful, df$in_charge) #r = .79",
+      "alpha(df[, c(\"accomplished\", \"successful\", \"achieving\", \"fullfilled\", \"self.worth\", \"confident\", \"productive\")])",
+      "# alpha = .94",
+      "# Factorial anova: awareness, pose, and their interaction predicting feelings of power",
+      "mymodel <- lm(feelpower ~ aware * expansive, data = dfe)",
+      "anovm <- anova(mymodel)",
+      "# Factorial logistic regression: awareness, pose, and their interaction predicting the decision to role the die",
+      "mylogit <- glm(Gamble ~ aware * expansive, family = binomial(link = \"logit\"), data = dfe)",
+      "# Factorial anova: awareness, pose, and their interaction predicting performance ratings (bonferroni corrected alpha = .025)",
+      "mymodel <- lm(mperf_3 ~ aware * expansive, data = dfe)",
+      "# Factorial anova: awareness, pose, and their interaction predicting hireability ratings (bonferroni corrected alpha = .025)",
+      "mymodel <- lm(mhire_3 ~ aware * expansive, data = dfe)"
+    ]
+  },
+  "data_hints": {
+    "Keller_et_al._2017_CRSP_Power_Poses_-_Raw_data.csv": {
+      "columns": [
+        "participant",
+        "rater_1",
+        "rater_2",
+        "rater_3",
+        "rater_4",
+        "rater_5",
+        "performance_1",
+        "performance_2",
+        "performance_3",
+        "performance_4",
+        "performance_5",
+        "hire_1",
+        "hire_2",
+        "hire_3",
+        "hire_4",
+        "hire_5",
+        "expansiveness_1",
+        "expansiveness_2",
+        "expansiveness_3",
+        "expansiveness_4",
+        "expansiveness_5",
+        "gender_1",
+        "gender_2",
+        "gender_3",
+        "gender_4",
+        "gender_5",
+        "race_1",
+        "race_2",
+        "race_3",
+        "race_4",
+        "race_5",
+        "Order",
+        "Room",
+        "qualtrics",
+        "cond",
+        "Date",
+        "Time",
+        "RA",
+        "Video",
+        "Pose",
+        "Gamble",
+        "Length",
+        "Comments",
+        "Exclude.Video",
+        "Exc.Reason",
+        "StartDate",
+        "EndDate",
+        "powerful",
+        "in_charge",
+        "dominant",
+        "in_control",
+        "leader",
+        "accomplished",
+        "successful",
+        "achieving",
+        "fullfilled",
+        "self.worth",
+        "confident",
+        "productive",
+        "aware_pp",
+        "ted_pp",
+        "heard_pp",
+        "gender",
+        "race",
+        "exclude_video1",
+        "comments_video1",
+        "exclude_video2",
+        "comments_video2"
+      ],
+      "sample_rows_counted": 292
+    }
+  },
+  "scoring": {
+    "type": "strict_real_paper_rubric",
+    "max_points": 100,
+    "criteria": [
+      {
+        "name": "uses_local_data_and_scripts",
+        "points": 15
+      },
+      {
+        "name": "identifies_concrete_target_analysis",
+        "points": 15
+      },
+      {
+        "name": "correct_design_and_variable_mapping",
+        "points": 15
+      },
+      {
+        "name": "appropriate_method_and_assumptions",
+        "points": 20
+      },
+      {
+        "name": "executable_python_pingouin_or_valid_scope_note",
+        "points": 15
+      },
+      {
+        "name": "numeric_reporting_when_reproducible",
+        "points": 10
+      },
+      {
+        "name": "interpretation_and_limitations",
+        "points": 10
+      }
+    ],
+    "critical_failures": [
+      "does not use local files",
+      "fabricates numeric results",
+      "ignores repeated-measures or nested structure when visible",
+      "claims Pingouin supports an unsupported model without caveat"
+    ]
+  }
+}

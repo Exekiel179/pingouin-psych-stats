@@ -1,0 +1,327 @@
+{
+  "id": "strict_014_rp_023_rr_023",
+  "source_task_id": "rp_023_rr_023",
+  "paper_title": "Brindley 2018 registered report",
+  "journal": "Comprehensive Results in Social Psychology",
+  "paper_url": "https://doi.org/10.1080/23743603.2018.1436939",
+  "doi": "10.1080/23743603.2018.1436939",
+  "repository_url": "https://osf.io/6bwmq/",
+  "source_language": "English",
+  "pingouin_route_hint": "pingouin-stat-router",
+  "files": [
+    {
+      "kind": "doc",
+      "path": "tasks/strict_014_rp_023_rr_023/sources/doc/Brindley_et_al._-_Laboratory_Log.pdf",
+      "source_url": "https://osf.io/download/kzhbp/",
+      "size": 68876
+    },
+    {
+      "kind": "doc",
+      "path": "tasks/strict_014_rp_023_rr_023/sources/doc/Brindley_et_al._-_Supplemental_Material.pdf",
+      "source_url": "https://osf.io/download/x89cp/",
+      "size": 2138038
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_014_rp_023_rr_023/sources/data/Study_2_Data_SPSS_-_Public.sav",
+      "source_url": "https://osf.io/download/9xa5d/",
+      "size": 569127
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_014_rp_023_rr_023/sources/data/Study_2_Data_CSV_-_Public.csv",
+      "source_url": "https://osf.io/download/k2nwc/",
+      "size": 742813
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_014_rp_023_rr_023/sources/data/Study_2_-_Deidentified_Raw_Data.csv",
+      "source_url": "https://osf.io/download/2gv73/",
+      "size": 341452
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_014_rp_023_rr_023/sources/data/Study_2_Codebook_-_Public.xlsx",
+      "source_url": "https://osf.io/download/3x9pr/",
+      "size": 15902
+    },
+    {
+      "kind": "script",
+      "path": "tasks/strict_014_rp_023_rr_023/sources/script/Study_2_SPSS_Syntax_-_Public.sps",
+      "source_url": "https://osf.io/download/fvj4g/",
+      "size": 12780
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_014_rp_023_rr_023/sources/data/Study_1_Data_SPSS_-_Public.sav",
+      "source_url": "https://osf.io/download/btzku/",
+      "size": 587296
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_014_rp_023_rr_023/sources/data/Study_1_Data_CSV_-_Public.csv",
+      "source_url": "https://osf.io/download/gvb2w/",
+      "size": 754425
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_014_rp_023_rr_023/sources/data/Study_1_-_Deidentified_Raw_Data.csv",
+      "source_url": "https://osf.io/download/5nbc3/",
+      "size": 348657
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_014_rp_023_rr_023/sources/data/Study_1_Codebook_-_Public.xlsx",
+      "source_url": "https://osf.io/download/uq98j/",
+      "size": 15987
+    },
+    {
+      "kind": "script",
+      "path": "tasks/strict_014_rp_023_rr_023/sources/script/Study_1_SPSS_Syntax_-_Public.sps",
+      "source_url": "https://osf.io/download/2hrp3/",
+      "size": 12627
+    }
+  ],
+  "script_hints": {
+    "detected_analysis": [
+      "anova",
+      "correlation",
+      "regression",
+      "reliability"
+    ],
+    "candidate_variables": [],
+    "analysis_snippets": [
+      "/SCALE (ALPHA)=ALL/MODEL =ALPHA",
+      "/SUMMARY=TOTAL MEANS CORR .",
+      "/SCALE(ALPHA)=ALL/MODEL=ALPHA",
+      "/SUMMARY=TOTAL MEANS CORR.",
+      "*Regression Analyses*",
+      "**Centered Regression Analysis**",
+      "*Full Regression Model with all predictors - 4 and 5-way interactions are all n.s. so they are subsequently dropped from the model",
+      "REGRESSION",
+      "/STATISTICS COEFF OUTS CI(95) R ANOVA",
+      "/MODEL=ALPHA."
+    ]
+  },
+  "data_hints": {
+    "Study_2_Data_SPSS_-_Public.sav": {
+      "note": ".sav file; inspect with pandas/pyreadstat/R as appropriate"
+    },
+    "Study_2_Data_CSV_-_Public.csv": {
+      "columns": [
+        "startdate",
+        "enddate",
+        "ConsentAgree",
+        "keepdrop",
+        "conriskkeepdrop",
+        "targetphysattract",
+        "targetformidability",
+        "targetgroupstatus",
+        "conceptionrisk",
+        "vsc",
+        "rominterest",
+        "matevalue",
+        "Cconceptionrisk",
+        "Cvsc",
+        "age",
+        "gender",
+        "turkprimegender",
+        "sexorien",
+        "citizen",
+        "hormcon",
+        "education",
+        "single",
+        "annualincome",
+        "duplicateID",
+        "demoexclusioncriteria",
+        "carelessresponding",
+        "AttentionCheck",
+        "attentioncheckpf",
+        "targetphoto",
+        "targetnationality",
+        "completedsurvey",
+        "compensated",
+        "race_1",
+        "race_2",
+        "race_3",
+        "race_4",
+        "race_5",
+        "race_6",
+        "race_7",
+        "BehVig1",
+        "BehVig2",
+        "BehVig3",
+        "BehVig4",
+        "BehVig5",
+        "BehVig6",
+        "BehVig7",
+        "BehVig8",
+        "BehVig9",
+        "BehVig10",
+        "BehVig11",
+        "BehVig12",
+        "BehVig13",
+        "BehVig14",
+        "BehVig15",
+        "BehVig16",
+        "BehVig17",
+        "BehVig18",
+        "BehVig19",
+        "BehVig20",
+        "BehVig21",
+        "BehVig22",
+        "BehVig23",
+        "BehVig24",
+        "BehVig25",
+        "BehVig26",
+        "BehVig27",
+        "BehVig28",
+        "BehVig29",
+        "BehVig30",
+        "BehVig8r",
+        "BehVig26r",
+        "BehVig27r",
+        "BehVig28r",
+        "BehVig29r",
+        "BehVig30r",
+        "matevalue1",
+        "matevalue2",
+        "matevalue3",
+        "matevalue4",
+        "matevalue5"
+      ],
+      "sample_rows_counted": 1992
+    },
+    "Study_2_-_Deidentified_Raw_Data.csv": {
+      "columns": [
+        "V8",
+        "V9",
+        "V10",
+        "ConsentAgree",
+        "age",
+        "gender",
+        "sexorien",
+        "race_1",
+        "race_2",
+        "race_3",
+        "race_4",
+        "race_5",
+        "race_6",
+        "race_7",
+        "citizen",
+        "hormcon",
+        "education",
+        "single",
+        "annualincome",
+        "BehVig1",
+        "BehVig2",
+        "BehVig3",
+        "BehVig4",
+        "BehVig5",
+        "Pers1_E",
+        "Pers2_AR",
+        "Pers3_C",
+        "Pers4_N",
+        "Pers5_O",
+        "Pers6_ER",
+        "Pers7_A",
+        "Pers8_CR",
+        "Pers9_NR",
+        "Pers10_O",
+        "Pers11_E",
+        "BehVig6",
+        "BehVig7",
+        "BehVig8",
+        "BehVig9",
+        "BehVig10",
+        "Pers12_AR",
+        "Pers13_C",
+        "Pers14_N",
+        "Pers15_O",
+        "Pers16_E",
+        "Pers17_A",
+        "Pers18_CR",
+        "Pers19_N",
+        "Pers20_O",
+        "Pers21_ER",
+        "Pers22_A",
+        "BehVig11",
+        "BehVig12",
+        "BehVig13",
+        "BehVig14",
+        "BehVig15",
+        "AttentionCheck",
+        "Pers23_CR",
+        "Pers24_NR",
+        "Pers25_O",
+        "Pers26_E",
+        "Pers27_AR",
+        "Pers28_C",
+        "Pers29_N",
+        "Pers30_O",
+        "Pers31E_R",
+        "Pers32_A",
+        "Pers33_C",
+        "BehVig16",
+        "BehVig17",
+        "BehVig18",
+        "BehVig19",
+        "BehVig20",
+        "Pers34_NR",
+        "Pers35_OR",
+        "Pers36_E",
+        "Pers37_AR",
+        "Pers38_C",
+        "Pers39_N",
+        "Pers40_O"
+      ],
+      "sample_rows_counted": 1108
+    },
+    "Study_2_Codebook_-_Public.xlsx": {
+      "note": ".xlsx file; inspect with pandas/pyreadstat/R as appropriate"
+    },
+    "Study_1_Data_SPSS_-_Public.sav": {
+      "note": ".sav file; inspect with pandas/pyreadstat/R as appropriate"
+    }
+  },
+  "scoring": {
+    "type": "strict_real_paper_rubric",
+    "max_points": 100,
+    "criteria": [
+      {
+        "name": "uses_local_data_and_scripts",
+        "points": 15
+      },
+      {
+        "name": "identifies_concrete_target_analysis",
+        "points": 15
+      },
+      {
+        "name": "correct_design_and_variable_mapping",
+        "points": 15
+      },
+      {
+        "name": "appropriate_method_and_assumptions",
+        "points": 20
+      },
+      {
+        "name": "executable_python_pingouin_or_valid_scope_note",
+        "points": 15
+      },
+      {
+        "name": "numeric_reporting_when_reproducible",
+        "points": 10
+      },
+      {
+        "name": "interpretation_and_limitations",
+        "points": 10
+      }
+    ],
+    "critical_failures": [
+      "does not use local files",
+      "fabricates numeric results",
+      "ignores repeated-measures or nested structure when visible",
+      "claims Pingouin supports an unsupported model without caveat"
+    ]
+  }
+}

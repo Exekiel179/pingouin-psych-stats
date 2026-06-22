@@ -1,0 +1,230 @@
+{
+  "id": "strict_017_rp_029_rr_029",
+  "source_task_id": "rp_029_rr_029",
+  "paper_title": "Weston 2018 registered report",
+  "journal": "Journal of Research in Personality",
+  "paper_url": "https://doi.org/10.1016/j.jrp.2017.10.005",
+  "doi": "10.1016/j.jrp.2017.10.005",
+  "repository_url": "https://osf.io/hr7vx/",
+  "source_language": "English",
+  "pingouin_route_hint": "pingouin-stat-router",
+  "files": [
+    {
+      "kind": "doc",
+      "path": "tasks/strict_017_rp_029_rr_029/sources/doc/SF_3_Measures.pdf",
+      "source_url": "https://osf.io/download/zwbv6/",
+      "size": 91102
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_017_rp_029_rr_029/sources/data/SPI_Items_used.xlsx",
+      "source_url": "https://osf.io/download/m34eb/",
+      "size": 53621
+    },
+    {
+      "kind": "doc",
+      "path": "tasks/strict_017_rp_029_rr_029/sources/doc/SF_1_Analyses.pdf",
+      "source_url": "https://osf.io/download/hbgqz/",
+      "size": 256720
+    },
+    {
+      "kind": "doc",
+      "path": "tasks/strict_017_rp_029_rr_029/sources/doc/SF_2_Exploratory.pdf",
+      "source_url": "https://osf.io/download/w27v8/",
+      "size": 215113
+    },
+    {
+      "kind": "other",
+      "path": "tasks/strict_017_rp_029_rr_029/sources/other/mediation_table.tex",
+      "source_url": "https://osf.io/download/jrd2u/",
+      "size": 4268
+    },
+    {
+      "kind": "script",
+      "path": "tasks/strict_017_rp_029_rr_029/sources/script/extra_analyses.R",
+      "source_url": "https://osf.io/download/gz5sk/",
+      "size": 27172
+    },
+    {
+      "kind": "other",
+      "path": "tasks/strict_017_rp_029_rr_029/sources/other/mediation_table.Rnw",
+      "source_url": "https://osf.io/download/k3umc/",
+      "size": 4890
+    },
+    {
+      "kind": "script",
+      "path": "tasks/strict_017_rp_029_rr_029/sources/script/vigilance.R",
+      "source_url": "https://osf.io/download/2mnu5/",
+      "size": 50887
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_017_rp_029_rr_029/sources/data/Neuroticism_26_Vigilance_-_Final_Version_August_21_2C_2017_12.21_skip23.csv",
+      "source_url": "https://osf.io/download/kx8u7/",
+      "size": 80920
+    },
+    {
+      "kind": "doc",
+      "path": "tasks/strict_017_rp_029_rr_029/sources/doc/Pre-registration_revised.pdf",
+      "source_url": "https://osf.io/download/2zwv9/",
+      "size": 214559
+    }
+  ],
+  "script_hints": {
+    "detected_analysis": [
+      "anova",
+      "correlation",
+      "regression",
+      "mediation",
+      "reliability"
+    ],
+    "candidate_variables": [
+      "outcome",
+      "stat"
+    ],
+    "analysis_snippets": [
+      "(alpha.c <- psych::alpha(vigdata[, con.items], check.keys = T))",
+      "c.keys <- alpha.c$keys",
+      "(alpha.ax <- psych::alpha(vigdata[, anxiety.items], check.keys = T))",
+      "ax.keys <- alpha.ax$keys",
+      "(alpha.es <- psych::alpha(vigdata[, emotionalstability.items], check.keys = T))",
+      "es.keys <- alpha.es$keys",
+      "(alpha.in <- psych::alpha(vigdata[, industry.items], check.keys = T))",
+      "in.keys <- alpha.in$keys*-1",
+      "(alpha.ir <- psych::alpha(vigdata[, irritability.items], check.keys = T))",
+      "ir.keys <- alpha.ir$keys*-1",
+      "(alpha.or <- psych::alpha(vigdata[, order.items], check.keys = T))",
+      "or.keys <- alpha.or$keys*-1"
+    ]
+  },
+  "data_hints": {
+    "SPI_Items_used.xlsx": {
+      "note": ".xlsx file; inspect with pandas/pyreadstat/R as appropriate"
+    },
+    "Neuroticism_26_Vigilance_-_Final_Version_August_21_2C_2017_12.21_skip23.csv": {
+      "columns": [
+        "StartDate",
+        "EndDate",
+        "Status",
+        "IPAddress",
+        "Progress",
+        "Duration (in seconds)",
+        "Finished",
+        "RecordedDate",
+        "ResponseId",
+        "RecipientLastName",
+        "RecipientFirstName",
+        "RecipientEmail",
+        "ExternalReference",
+        "LocationLatitude",
+        "LocationLongitude",
+        "DistributionChannel",
+        "UserLanguage",
+        "Consent",
+        "HC",
+        "HC_20_TEXT",
+        "Dr",
+        "SRH",
+        "Stress",
+        "Diet",
+        "Exercise_1",
+        "Med",
+        "Adhere",
+        "CigEver",
+        "CigNow",
+        "Q100",
+        "AlDay_1",
+        "AlDrk_1",
+        "AlBng_1",
+        "Drg_1",
+        "BAQ01",
+        "BAQ02",
+        "BAQ03",
+        "BAQ04",
+        "BAQ05",
+        "BAQ06",
+        "BAQ07",
+        "BAQ08",
+        "BAQ09",
+        "BAQ10",
+        "BAQ11",
+        "BAQ12",
+        "BAQ13",
+        "BAQ14",
+        "BAQ15",
+        "BAQ16",
+        "BAQ17",
+        "BAQ18",
+        "PBCS01",
+        "PBCS02",
+        "PBCS03",
+        "PBCS04",
+        "PBCS05",
+        "SBA01",
+        "SBA02",
+        "SBA03",
+        "SBA04",
+        "BRQ01",
+        "BRQ02",
+        "BRQ03",
+        "AC1",
+        "BRQ04",
+        "BRQ05",
+        "BRQ06",
+        "BRQ07",
+        "BVS1",
+        "BVS2",
+        "BVS3",
+        "BVS4_BVS4_1",
+        "BVS4_BVS4_2",
+        "BVS4_BVS4_3",
+        "BVS4_BVS4_4",
+        "BVS4_BVS4_5",
+        "BVS4_BVS4_6",
+        "BVS4_BVS4_7",
+        "BVS4_BVS4_8"
+      ],
+      "sample_rows_counted": 161
+    }
+  },
+  "scoring": {
+    "type": "strict_real_paper_rubric",
+    "max_points": 100,
+    "criteria": [
+      {
+        "name": "uses_local_data_and_scripts",
+        "points": 15
+      },
+      {
+        "name": "identifies_concrete_target_analysis",
+        "points": 15
+      },
+      {
+        "name": "correct_design_and_variable_mapping",
+        "points": 15
+      },
+      {
+        "name": "appropriate_method_and_assumptions",
+        "points": 20
+      },
+      {
+        "name": "executable_python_pingouin_or_valid_scope_note",
+        "points": 15
+      },
+      {
+        "name": "numeric_reporting_when_reproducible",
+        "points": 10
+      },
+      {
+        "name": "interpretation_and_limitations",
+        "points": 10
+      }
+    ],
+    "critical_failures": [
+      "does not use local files",
+      "fabricates numeric results",
+      "ignores repeated-measures or nested structure when visible",
+      "claims Pingouin supports an unsupported model without caveat"
+    ]
+  }
+}

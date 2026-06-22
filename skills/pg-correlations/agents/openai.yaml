@@ -1,0 +1,7 @@
+interface:
+  display_name: "PG Correlations"
+  short_description: "Run correlation and partial correlation workflows"
+  brand_color: "#1F7665"
+  default_prompt: "Use $pg-correlations to test associations between my psychology variables."
+policy:
+  allow_implicit_invocation: true

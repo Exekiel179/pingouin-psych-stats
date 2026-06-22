@@ -1,0 +1,26 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# --- Benchmark: large third-party paper datasets / raw sources ---
+# These hold redistributed paper data, PDFs, .sav/.xls/.zip from OSF and
+# published studies. They are not redistributable and are large (~180MB).
+# Regenerate locally with the build scripts. Task metadata, prompts, and
+# scripts are kept under version control.
+**/sources/
+
+# --- Benchmark run outputs (regenerated locally) ---
+benchmark/outputs/
+benchmark/real_paper_analysis_tasks/outputs/
+benchmark/strict_real_paper_benchmark/outputs/
+
+# --- OS / editor cruft ---
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/

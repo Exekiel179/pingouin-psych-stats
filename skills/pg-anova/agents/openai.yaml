@@ -1,0 +1,7 @@
+interface:
+  display_name: "PG ANOVA"
+  short_description: "Run ANOVA, RM-ANOVA, mixed ANOVA, ANCOVA"
+  brand_color: "#1F7665"
+  default_prompt: "Use $pg-anova to analyze my factorial or repeated-measures psychology design."
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,126 @@
+{
+  "id": "strict_018_rp_039_curated_osf_2adxj",
+  "source_task_id": "rp_039_curated_osf_2adxj",
+  "paper_title": "Nature Human Behaviour Repro - Newson et al. (2025)",
+  "journal": "Nature Human Behaviour",
+  "paper_url": "",
+  "doi": "",
+  "repository_url": "https://osf.io/2adxj/",
+  "source_language": "English",
+  "pingouin_route_hint": "pg-correlations",
+  "files": [
+    {
+      "kind": "doc",
+      "path": "tasks/strict_018_rp_039_curated_osf_2adxj/sources/doc/Output_Reproducibility_and_Robustness_Study_3_PDF_Export.pdf",
+      "source_url": "https://osf.io/download/vtfsc/",
+      "size": 450617
+    },
+    {
+      "kind": "doc",
+      "path": "tasks/strict_018_rp_039_curated_osf_2adxj/sources/doc/R_codes_v3_Newsonetal.2025.html",
+      "source_url": "https://osf.io/download/695875945b964c67c5d6be9b/",
+      "size": 117673
+    },
+    {
+      "kind": "script",
+      "path": "tasks/strict_018_rp_039_curated_osf_2adxj/sources/script/R_codes_v3_Newsonetal.2025.qmd",
+      "source_url": "https://osf.io/download/695875940b879b01ee8a6b66/",
+      "size": 10301
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_018_rp_039_curated_osf_2adxj/sources/data/Correlation_BonfCorrected.xlsx",
+      "source_url": "https://osf.io/download/69458b3200f6b288c7b3d54d/",
+      "size": 22299
+    },
+    {
+      "kind": "script",
+      "path": "tasks/strict_018_rp_039_curated_osf_2adxj/sources/script/Syntax-Reproducibility-Robustness.sps",
+      "source_url": "https://osf.io/download/696517d25ae4446cf8fbee8b/",
+      "size": 10293
+    }
+  ],
+  "script_hints": {
+    "detected_analysis": [
+      "anova",
+      "correlation",
+      "regression",
+      "mediation",
+      "reliability"
+    ],
+    "candidate_variables": [
+      "SDS_17",
+      "SES",
+      "USA",
+      "age",
+      "criminal_att_final",
+      "employed_yes",
+      "fusion_7",
+      "fusion_8",
+      "good_job",
+      "kids",
+      "male",
+      "no_trouble",
+      "relationship_yes"
+    ],
+    "analysis_snippets": [
+      "# Compute Cronbach's alpha criminal_behav",
+      "alpha(S3_Data[, c(",
+      "# Compute Cronbach's alpha SDS",
+      "result_fusion <- corr.test(",
+      "method = \"pearson\",   # same as SPSS default",
+      "result <- corr.test(",
+      "method = \"pearson\",    # same as SPSS default",
+      "PARTIAL CORR /VARIABLES=criminal_att_final fusion_1 fusion_2 fusion_3 fusion_4 fusion_5 fusion_6 fusion_8 fusion_7 BY age relationship_yes /SIGNIFICANCE=TWOTAIL /MISSING=ANALYSIS.",
+      "PARTIAL CORR /VARIABLES=criminal_behav fusion_1 fusion_2 fusion_3 fusion_4 fusion_5 fusion_6 fusion_8 fusion_7 BY age white relationship_yes SDS_17 /SIGNIFICANCE=TWOTAIL /MISSING=ANALYSIS.",
+      "PARTIAL CORR /VARIABLES=arrested fusion_1 fusion_2 fusion_3 fusion_4 fusion_5 fusion_6 fusion_8 fusion_7 BY white relationship_yes SES /SIGNIFICANCE=TWOTAIL /MISSING=ANALYSIS.",
+      "PARTIAL CORR /VARIABLES=convicted fusion_1 fusion_2 fusion_3 fusion_4 fusion_5 fusion_6 fusion_8 fusion_7 BY SES white /SIGNIFICANCE=TWOTAIL /MISSING=ANALYSIS.",
+      "PARTIAL CORR /VARIABLES=good_job fusion_1 fusion_2 fusion_3 fusion_4 fusion_5 fusion_6 fusion_8 fusion_7 BY SES relationship_yes employed_yes SDS_17 /SIGNIFICANCE=TWOTAIL /MISSING=ANALYSIS."
+    ]
+  },
+  "data_hints": {
+    "Correlation_BonfCorrected.xlsx": {
+      "note": ".xlsx file; inspect with pandas/pyreadstat/R as appropriate"
+    }
+  },
+  "scoring": {
+    "type": "strict_real_paper_rubric",
+    "max_points": 100,
+    "criteria": [
+      {
+        "name": "uses_local_data_and_scripts",
+        "points": 15
+      },
+      {
+        "name": "identifies_concrete_target_analysis",
+        "points": 15
+      },
+      {
+        "name": "correct_design_and_variable_mapping",
+        "points": 15
+      },
+      {
+        "name": "appropriate_method_and_assumptions",
+        "points": 20
+      },
+      {
+        "name": "executable_python_pingouin_or_valid_scope_note",
+        "points": 15
+      },
+      {
+        "name": "numeric_reporting_when_reproducible",
+        "points": 10
+      },
+      {
+        "name": "interpretation_and_limitations",
+        "points": 10
+      }
+    ],
+    "critical_failures": [
+      "does not use local files",
+      "fabricates numeric results",
+      "ignores repeated-measures or nested structure when visible",
+      "claims Pingouin supports an unsupported model without caveat"
+    ]
+  }
+}

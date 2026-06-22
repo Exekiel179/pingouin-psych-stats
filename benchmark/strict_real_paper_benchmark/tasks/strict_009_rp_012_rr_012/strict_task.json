@@ -1,0 +1,748 @@
+{
+  "id": "strict_009_rp_012_rr_012",
+  "source_task_id": "rp_012_rr_012",
+  "paper_title": "Kvetnaya 2018 registered report",
+  "journal": "Journal of European Psychology Students",
+  "paper_url": "https://doi.org/10.5334/jeps.450",
+  "doi": "10.5334/jeps.450",
+  "repository_url": "https://osf.io/hba2p/",
+  "source_language": "English",
+  "pingouin_route_hint": "pg-mean-tests",
+  "files": [
+    {
+      "kind": "doc",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/doc/Registered_Replication_Report_Spatial_ISE_Final_Manuscript.pdf",
+      "source_url": "https://osf.io/download/3ns8u/",
+      "size": 304444
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj01-20170515_1132.txt",
+      "source_url": "https://osf.io/download/4w6h7/",
+      "size": 10831
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj09-20170517_1327.txt",
+      "source_url": "https://osf.io/download/hfndc/",
+      "size": 10831
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj21-20170523_1528.txt",
+      "source_url": "https://osf.io/download/6ysnt/",
+      "size": 10831
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj23-20170529_1125.txt",
+      "source_url": "https://osf.io/download/ax832/",
+      "size": 10831
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj04-20170516_1433.txt",
+      "source_url": "https://osf.io/download/4ca93/",
+      "size": 10831
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj35-20170613_1440.txt",
+      "source_url": "https://osf.io/download/nhjmy/",
+      "size": 10831
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj03-20170516_1342.txt",
+      "source_url": "https://osf.io/download/nbt7e/",
+      "size": 10831
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj18-20170522_1204.txt",
+      "source_url": "https://osf.io/download/nbm3a/",
+      "size": 10831
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj30-20170612_1104.txt",
+      "source_url": "https://osf.io/download/ch5jf/",
+      "size": 10831
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj12-20170518_1530.txt",
+      "source_url": "https://osf.io/download/mpxys/",
+      "size": 10831
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj02-20170515_1229.txt",
+      "source_url": "https://osf.io/download/8rvt9/",
+      "size": 10831
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj08-20170517_1235.txt",
+      "source_url": "https://osf.io/download/jh5sq/",
+      "size": 10831
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj24-20170529_1229.txt",
+      "source_url": "https://osf.io/download/jwv5r/",
+      "size": 10831
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj11-20170518_1425.txt",
+      "source_url": "https://osf.io/download/kqfmc/",
+      "size": 10831
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj39-20170616_1120.txt",
+      "source_url": "https://osf.io/download/76df5/",
+      "size": 10831
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj22-20170529_1024.txt",
+      "source_url": "https://osf.io/download/a729n/",
+      "size": 10831
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj14-20170519_1231.txt",
+      "source_url": "https://osf.io/download/h3nbp/",
+      "size": 10831
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj16-20170522_0837.txt",
+      "source_url": "https://osf.io/download/sabhx/",
+      "size": 10831
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj38-20170616_1030.txt",
+      "source_url": "https://osf.io/download/2kw5h/",
+      "size": 10831
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj05-20170516_1531.txt",
+      "source_url": "https://osf.io/download/p5sk9/",
+      "size": 10831
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj26-20170531_1230.txt",
+      "source_url": "https://osf.io/download/8y4vf/",
+      "size": 10831
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj41-20170621_1258.txt",
+      "source_url": "https://osf.io/download/4zjx2/",
+      "size": 10831
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj13-20170518_1739.txt",
+      "source_url": "https://osf.io/download/xqms8/",
+      "size": 10831
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj07-20170517_1144.txt",
+      "source_url": "https://osf.io/download/6yhdz/",
+      "size": 10831
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj10-20170518_1331.txt",
+      "source_url": "https://osf.io/download/23nz9/",
+      "size": 10831
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj25-20170530_1424.txt",
+      "source_url": "https://osf.io/download/yzwug/",
+      "size": 10831
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj33-20170612_1332.txt",
+      "source_url": "https://osf.io/download/2n6x4/",
+      "size": 10831
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj06-20170516_1631.txt",
+      "source_url": "https://osf.io/download/nftkm/",
+      "size": 10831
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj32-20170612_1234.txt",
+      "source_url": "https://osf.io/download/jqu9h/",
+      "size": 10831
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj29-20170602_1541.txt",
+      "source_url": "https://osf.io/download/re6mb/",
+      "size": 10831
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj37-20170613_1628.txt",
+      "source_url": "https://osf.io/download/gyw9k/",
+      "size": 10831
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj15-20170519_1344.txt",
+      "source_url": "https://osf.io/download/3c879/",
+      "size": 10831
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj20-20170523_1432.txt",
+      "source_url": "https://osf.io/download/d3926/",
+      "size": 10831
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj19-20170522_1250.txt",
+      "source_url": "https://osf.io/download/vbmws/",
+      "size": 10831
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj27-20170531_1408.txt",
+      "source_url": "https://osf.io/download/4yza3/",
+      "size": 10831
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj28-20170601_1329.txt",
+      "source_url": "https://osf.io/download/5978438a9ad5a1023756d90a/",
+      "size": 10831
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj17-20170522_0942.txt",
+      "source_url": "https://osf.io/download/fuq7e/",
+      "size": 10831
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj34-20170612_1526.txt",
+      "source_url": "https://osf.io/download/y67x8/",
+      "size": 10831
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj31-20170612_1146.txt",
+      "source_url": "https://osf.io/download/9xd35/",
+      "size": 10831
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj36-20170613_1533.txt",
+      "source_url": "https://osf.io/download/vqck3/",
+      "size": 10831
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj40-20170616_1228.txt",
+      "source_url": "https://osf.io/download/d8bcp/",
+      "size": 10831
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj02-20170412_1440.txt",
+      "source_url": "https://osf.io/download/x2qbv/",
+      "size": 10831
+    },
+    {
+      "kind": "script",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/script/spatialISEdata.R",
+      "source_url": "https://osf.io/download/apwq2/",
+      "size": 1966
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj03-20170421_1609.txt",
+      "source_url": "https://osf.io/download/49qkm/",
+      "size": 10831
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj01-20170411_1154.txt",
+      "source_url": "https://osf.io/download/c37g6/",
+      "size": 10831
+    },
+    {
+      "kind": "doc",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/doc/Figure_1.pdf",
+      "source_url": "https://osf.io/download/p8emz/",
+      "size": 6109
+    },
+    {
+      "kind": "doc",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/doc/Instructions_for_Participants_German.pdf",
+      "source_url": "https://osf.io/download/ynj9p/",
+      "size": 67205
+    },
+    {
+      "kind": "script",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/script/effectsizes.R",
+      "source_url": "https://osf.io/download/7wbfu/",
+      "size": 2645
+    },
+    {
+      "kind": "script",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/script/power.R",
+      "source_url": "https://osf.io/download/2evrm/",
+      "size": 2713
+    },
+    {
+      "kind": "script",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/script/spatialISE_final.R",
+      "source_url": "https://osf.io/download/6b2dh/",
+      "size": 5936
+    },
+    {
+      "kind": "doc",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/doc/Registered_Replication_Report_Spatial_ISE.pdf",
+      "source_url": "https://osf.io/download/j4475/",
+      "size": 625360
+    },
+    {
+      "kind": "doc",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/doc/KvetnayaSchopf2019DAGA.pdf",
+      "source_url": "https://osf.io/download/6j74p/",
+      "size": 546129
+    },
+    {
+      "kind": "doc",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/doc/Bachelor_Thesis_Verbal_ISE.pdf",
+      "source_url": "https://osf.io/download/f73a4/",
+      "size": 335246
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj03-20180517_1113.txt",
+      "source_url": "https://osf.io/download/htqgs/",
+      "size": 7609
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj02-20180517_1030.txt",
+      "source_url": "https://osf.io/download/xs3jf/",
+      "size": 7609
+    },
+    {
+      "kind": "script",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/script/verbalISE_pilot.R",
+      "source_url": "https://osf.io/download/szx7m/",
+      "size": 4894
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj01-20180517_0933.txt",
+      "source_url": "https://osf.io/download/re3vy/",
+      "size": 7609
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj08-20180704_1102.txt",
+      "source_url": "https://osf.io/download/az7cv/",
+      "size": 7609
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj39-20180719_1615.txt",
+      "source_url": "https://osf.io/download/6bpn5/",
+      "size": 7609
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj25-20180713_0853.txt",
+      "source_url": "https://osf.io/download/vz68q/",
+      "size": 7609
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj09-20180704_1216.txt",
+      "source_url": "https://osf.io/download/z4n8k/",
+      "size": 7609
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj38-20180719_1158.txt",
+      "source_url": "https://osf.io/download/42bne/",
+      "size": 7609
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj27-20180713_1157.txt",
+      "source_url": "https://osf.io/download/g5x2q/",
+      "size": 7609
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj34-20180718_1013.txt",
+      "source_url": "https://osf.io/download/q9xjb/",
+      "size": 7609
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj07-20180704_0946.txt",
+      "source_url": "https://osf.io/download/3kery/",
+      "size": 7609
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj02-20180703_1058.txt",
+      "source_url": "https://osf.io/download/cvze9/",
+      "size": 7609
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj03-20180703_1319.txt",
+      "source_url": "https://osf.io/download/sug8z/",
+      "size": 7609
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj15-20180705_1111.txt",
+      "source_url": "https://osf.io/download/3gv9s/",
+      "size": 7609
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj20-20180710_1155.txt",
+      "source_url": "https://osf.io/download/q5wxv/",
+      "size": 7609
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj22-20180711_1458.txt",
+      "source_url": "https://osf.io/download/utk6m/",
+      "size": 7609
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj33-20180717_1715.txt",
+      "source_url": "https://osf.io/download/q9m34/",
+      "size": 7609
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj19-20180710_1007.txt",
+      "source_url": "https://osf.io/download/4p9rb/",
+      "size": 7609
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj23-20180712_1617.txt",
+      "source_url": "https://osf.io/download/u8ma7/",
+      "size": 7609
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj13-20180705_0911.txt",
+      "source_url": "https://osf.io/download/mdyjg/",
+      "size": 7609
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj29-20180713_1457.txt",
+      "source_url": "https://osf.io/download/bqkat/",
+      "size": 7609
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj36-20180719_1002.txt",
+      "source_url": "https://osf.io/download/v6sr9/",
+      "size": 7609
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj28-20180713_1302.txt",
+      "source_url": "https://osf.io/download/v9s4y/",
+      "size": 7609
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj21-20180710_1500.txt",
+      "source_url": "https://osf.io/download/7u9jc/",
+      "size": 7609
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj30-20180713_1544.txt",
+      "source_url": "https://osf.io/download/s9fgw/",
+      "size": 7609
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj18-20180709_1157.txt",
+      "source_url": "https://osf.io/download/hjd6s/",
+      "size": 7609
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj31-20180717_1502.txt",
+      "source_url": "https://osf.io/download/3wxfk/",
+      "size": 7609
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj14-20180705_1001.txt",
+      "source_url": "https://osf.io/download/feauh/",
+      "size": 7609
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj01-20180703_0945.txt",
+      "source_url": "https://osf.io/download/ejbdq/",
+      "size": 7609
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj16-20180705_1201.txt",
+      "source_url": "https://osf.io/download/utwhd/",
+      "size": 7609
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj37-20180719_1056.txt",
+      "source_url": "https://osf.io/download/eqwma/",
+      "size": 7609
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj12-20180704_1754.txt",
+      "source_url": "https://osf.io/download/zex79/",
+      "size": 7609
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj26-20180713_1101.txt",
+      "source_url": "https://osf.io/download/fbmgs/",
+      "size": 7609
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj24-20180712_1716.txt",
+      "source_url": "https://osf.io/download/rbfap/",
+      "size": 7609
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj11-20180704_1445.txt",
+      "source_url": "https://osf.io/download/9a36x/",
+      "size": 7609
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj17-20180705_1245.txt",
+      "source_url": "https://osf.io/download/k3h28/",
+      "size": 7609
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj32-20180717_1600.txt",
+      "source_url": "https://osf.io/download/3yezj/",
+      "size": 7609
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj06-20180704_0900.txt",
+      "source_url": "https://osf.io/download/2qfdu/",
+      "size": 7609
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj40-20180719_1719.txt",
+      "source_url": "https://osf.io/download/hxr8u/",
+      "size": 7609
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj05-20180703_1555.txt",
+      "source_url": "https://osf.io/download/zvf4y/",
+      "size": 7609
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj04-20180703_1432.txt",
+      "source_url": "https://osf.io/download/9tmdw/",
+      "size": 7609
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/data/subj35-20180718_1306.txt",
+      "source_url": "https://osf.io/download/gvhzk/",
+      "size": 7609
+    },
+    {
+      "kind": "doc",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/doc/Instructions_for_Participants_German.pdf",
+      "source_url": "",
+      "size": 67205
+    },
+    {
+      "kind": "script",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/script/verbalISE.R",
+      "source_url": "https://osf.io/download/8c725/",
+      "size": 9041
+    },
+    {
+      "kind": "doc",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/doc/Figure_1.pdf",
+      "source_url": "",
+      "size": 6109
+    },
+    {
+      "kind": "script",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/script/power.R",
+      "source_url": "",
+      "size": 2713
+    },
+    {
+      "kind": "script",
+      "path": "tasks/strict_009_rp_012_rr_012/sources/script/power_intact.R",
+      "source_url": "https://osf.io/download/783b2/",
+      "size": 4204
+    }
+  ],
+  "script_hints": {
+    "detected_analysis": [
+      "anova",
+      "t_test"
+    ],
+    "candidate_variables": [
+      "Error",
+      "as.numeric",
+      "err",
+      "err2",
+      "id",
+      "pos",
+      "snd",
+      "trial",
+      "tsk"
+    ],
+    "analysis_snippets": [
+      "# two-way repeated measures ANOVA",
+      "m1 <- aov(err ~ snd*pos + Error(id/(snd*pos)), dat1)",
+      "with(dat1, t.test(err[dat1$snd == \"std\"], err[dat1$snd == \"chg\"],",
+      "m1 <- aov(y ~ snd*pos + Error(id/(snd*pos)), dat)",
+      "m2 <- aov(y ~ snd*pos + Error(id/(snd*pos)), dat[dat$snd != \"silence\",])",
+      "## For simulation: two-way setup; for ANOVA, collapse over position",
+      "m1 <- aov(y ~ snd + Error(id/snd), aggregate(y ~ snd + id, dat, mean))",
+      "dat.ttest <- aggregate(err ~ id + snd, dat1, sum)",
+      "dat.ttest$err2 <- dat.ttest$err/7",
+      "ttest <- with(dat.ttest, t.test(err2[dat.ttest$snd == \"std\"],",
+      "err2[dat.ttest$snd == \"chg\"], paired = TRUE))",
+      "m2 <- aov(err ~ snd*pos + Error(id/(snd*pos)), dat1[dat1$snd != \"sil\",])"
+    ]
+  },
+  "data_hints": {
+    "subj01-20170515_1132.txt": {
+      "columns": [
+        "# {'age': '23'",
+        " 'session': 'ses01.txt'",
+        " 'tstamp': '20170515_1132'",
+        " 'id': '01'",
+        " 'sex': 'f'}"
+      ],
+      "sample_rows_counted": 358
+    },
+    "subj09-20170517_1327.txt": {
+      "columns": [
+        "# {'age': '18'",
+        " 'session': 'ses09.txt'",
+        " 'tstamp': '20170517_1327'",
+        " 'id': '09'",
+        " 'sex': 'm'}"
+      ],
+      "sample_rows_counted": 358
+    },
+    "subj21-20170523_1528.txt": {
+      "columns": [
+        "# {'age': '25'",
+        " 'session': 'ses21.txt'",
+        " 'tstamp': '20170523_1528'",
+        " 'id': '21'",
+        " 'sex': 'f'}"
+      ],
+      "sample_rows_counted": 358
+    },
+    "subj23-20170529_1125.txt": {
+      "columns": [
+        "# {'age': '18'",
+        " 'session': 'ses23.txt'",
+        " 'tstamp': '20170529_1125'",
+        " 'id': '23'",
+        " 'sex': 'f'}"
+      ],
+      "sample_rows_counted": 358
+    },
+    "subj04-20170516_1433.txt": {
+      "columns": [
+        "# {'age': '22'",
+        " 'session': 'ses04.txt'",
+        " 'tstamp': '20170516_1433'",
+        " 'id': '04'",
+        " 'sex': 'm'}"
+      ],
+      "sample_rows_counted": 358
+    }
+  },
+  "scoring": {
+    "type": "strict_real_paper_rubric",
+    "max_points": 100,
+    "criteria": [
+      {
+        "name": "uses_local_data_and_scripts",
+        "points": 15
+      },
+      {
+        "name": "identifies_concrete_target_analysis",
+        "points": 15
+      },
+      {
+        "name": "correct_design_and_variable_mapping",
+        "points": 15
+      },
+      {
+        "name": "appropriate_method_and_assumptions",
+        "points": 20
+      },
+      {
+        "name": "executable_python_pingouin_or_valid_scope_note",
+        "points": 15
+      },
+      {
+        "name": "numeric_reporting_when_reproducible",
+        "points": 10
+      },
+      {
+        "name": "interpretation_and_limitations",
+        "points": 10
+      }
+    ],
+    "critical_failures": [
+      "does not use local files",
+      "fabricates numeric results",
+      "ignores repeated-measures or nested structure when visible",
+      "claims Pingouin supports an unsupported model without caveat"
+    ]
+  }
+}

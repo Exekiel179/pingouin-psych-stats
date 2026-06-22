@@ -1,0 +1,186 @@
+{
+  "id": "strict_006_rp_009_rr_009",
+  "source_task_id": "rp_009_rr_009",
+  "paper_title": "Steegen 2014 registered report",
+  "journal": "Frontiers in Psychology",
+  "paper_url": "https://doi.org/10.3389/fpsyg.2014.00786",
+  "doi": "10.3389/fpsyg.2014.00786",
+  "repository_url": "https://osf.io/ivfu6/",
+  "source_language": "English",
+  "pingouin_route_hint": "pingouin-stat-router",
+  "files": [
+    {
+      "kind": "doc",
+      "path": "tasks/strict_006_rp_009_rr_009/sources/doc/steegenetal2014_report.pdf",
+      "source_url": "https://osf.io/download/7kimb/",
+      "size": 692114
+    },
+    {
+      "kind": "doc",
+      "path": "tasks/strict_006_rp_009_rr_009/sources/doc/pre_data_collection_steegenetal2014.pdf",
+      "source_url": "https://osf.io/download/v4ukp/",
+      "size": 124278
+    },
+    {
+      "kind": "script",
+      "path": "tasks/strict_006_rp_009_rr_009/sources/script/steegenetal2014_confirmatoryanalyses.m",
+      "source_url": "https://osf.io/download/587cs/",
+      "size": 5967
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_006_rp_009_rr_009/sources/data/readme.txt",
+      "source_url": "https://osf.io/download/ci42y/",
+      "size": 1057
+    },
+    {
+      "kind": "script",
+      "path": "tasks/strict_006_rp_009_rr_009/sources/script/crowdwithin_analysis.m",
+      "source_url": "https://osf.io/download/gjwde/",
+      "size": 2581
+    },
+    {
+      "kind": "script",
+      "path": "tasks/strict_006_rp_009_rr_009/sources/script/steegenetal2014_posthocanalyses.m",
+      "source_url": "https://osf.io/download/47gin/",
+      "size": 1146
+    },
+    {
+      "kind": "script",
+      "path": "tasks/strict_006_rp_009_rr_009/sources/script/steegenetal2014_postprocessing.m",
+      "source_url": "https://osf.io/download/hzd8f/",
+      "size": 3925
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_006_rp_009_rr_009/sources/data/rawdata_delayed_session1.txt",
+      "source_url": "https://osf.io/download/k64yt/",
+      "size": 34998
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_006_rp_009_rr_009/sources/data/rawdata_immediate.txt",
+      "source_url": "https://osf.io/download/ckw86/",
+      "size": 95468
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_006_rp_009_rr_009/sources/data/rawdata_delayed_session2.txt",
+      "source_url": "https://osf.io/download/nbkvg/",
+      "size": 20847
+    },
+    {
+      "kind": "other",
+      "path": "tasks/strict_006_rp_009_rr_009/sources/other/data_steegenetal2014.mat",
+      "source_url": "https://osf.io/download/ezqph/",
+      "size": 7151
+    },
+    {
+      "kind": "script",
+      "path": "tasks/strict_006_rp_009_rr_009/sources/script/steegenetal2014_samplesize.m",
+      "source_url": "https://osf.io/download/ymd4x/",
+      "size": 1217
+    },
+    {
+      "kind": "script",
+      "path": "tasks/strict_006_rp_009_rr_009/sources/script/RPP_ivfu6.R",
+      "source_url": "https://osf.io/download/8twa9/",
+      "size": 6119
+    }
+  ],
+  "script_hints": {
+    "detected_analysis": [
+      "t_test",
+      "correlation",
+      "reliability"
+    ],
+    "candidate_variables": [],
+    "analysis_snippets": [
+      "grp(set).corr{g}=corr(grp(set).d{g}, grp(set).d{3});",
+      "alpha=.05;",
+      "% ttest",
+      "[h p ci stats] = ttest(grp(set).d{g} - grp(set).d{3});",
+      "ncp_low = fzero(@(delta) tnonct(delta, df, 1-alpha/2, grp(set).t{g}), [-20,20]);",
+      "ncp_high = fzero(@(delta) tnonct(delta, df, alpha/2, grp(set).t{g}), [-20,20]);",
+      "[h p ci stats] = ttest(grp(set).d{1} - grp(set).d{2});",
+      "ncp_low = fzero(@(delta) tnonct(delta, df, 1-alpha/2, grp(set).t{3}), [-20,20]);",
+      "ncp_high = fzero(@(delta) tnonct(delta, df, alpha/2, grp(set).t{3}), [-20,20]);",
+      "ncp_low = fzero(@(delta) tnonct(delta, df, 1-alpha/2, grpcmp.t{1}), [-20,20]);",
+      "ncp_high = fzero(@(delta) tnonct(delta, df, alpha/2, grpcmp.t{1}), [-20,20]);",
+      "[h3 p3 ci3 stats3] = ttest(grp(set).d{1} - grp(set).d{2});"
+    ]
+  },
+  "data_hints": {
+    "readme.txt": {
+      "columns": [
+        "This is the code for Steegen",
+        " S.",
+        " Dewitte",
+        " L.",
+        " Tuerlinckx",
+        " F.",
+        " & Vanpaemel",
+        " W. (2014).  Measuring the crowd within again: A pre-registered replication study. Frontiers in Psychology."
+      ],
+      "sample_rows_counted": 10
+    },
+    "rawdata_delayed_session1.txt": {
+      "columns": [
+        "day\ttime\tage\tnationality\tsex\tinformedconsent\tstudent_number\tstudent_number_simple\tq1\tdefocus_q1\tRT_1\tq2\tdefocus_q2\tRT_2\tq3\tdefocus_q3\tRT_3\tq4\tdefocus_q4\tRT_4\tq5\tdefocus_q5\tRT_5\tq6\tdefocus_q6\tRT_6\tq7\tdefocus_q7\tRT_7\tq8\tdefocus_q8\tRT_8"
+      ],
+      "sample_rows_counted": 231
+    },
+    "rawdata_immediate.txt": {
+      "columns": [
+        "day \ttime\tage\tnationality\tsex\tq1a\tdefocus_q1a\tRT_1a\tq2a\tdefocus_q2a\tRT_2a\tq3a\tdefocus_q3a\tRT_3a\tq4a\tdefocus_q4a\tRT_4a\tq5a\tdefocus_q5a\tRT_5a\tq6a\tdefocus_q6a\tRT_6a\tq7a\tdefocus_q7a\tRT_7a\tq8a\tdefocus_q8a\tRT_8a\tq1b\tdefocus_q1b\tRT_1b\tq2b\tdefocus_q2b\tRT_2b\tq3b\tdefocus_q3b\tRT_3b\tq4b\tdefocus_q4b\tRT_4b\tq5b\tdefocus_q5b\tRT_5b\tq6b\tdefocus_q6b\tRT_6b\tq7b\tdefocus_q7b\tRT_7b\tq8b\tdefocus_q8b\tRT_8b\tcheated"
+      ],
+      "sample_rows_counted": 484
+    },
+    "rawdata_delayed_session2.txt": {
+      "columns": [
+        "day\ttime\tstudent_number\tstudent_number_simple\tq1\tdefocus_q1\tRT_1\tq2\tdefocus_q2\tRT_2\tq3\tdefocus_q3\tRT_3\tq4\tdefocus_q4\tRT_4\tq5\tdefocus_q5\tRT_5\tq6\tdefocus_q6\tRT_6\tq7\tdefocus_q7\tRT_7\tq8\tdefocus_q8\tRT_8\tpeaking"
+      ],
+      "sample_rows_counted": 171
+    }
+  },
+  "scoring": {
+    "type": "strict_real_paper_rubric",
+    "max_points": 100,
+    "criteria": [
+      {
+        "name": "uses_local_data_and_scripts",
+        "points": 15
+      },
+      {
+        "name": "identifies_concrete_target_analysis",
+        "points": 15
+      },
+      {
+        "name": "correct_design_and_variable_mapping",
+        "points": 15
+      },
+      {
+        "name": "appropriate_method_and_assumptions",
+        "points": 20
+      },
+      {
+        "name": "executable_python_pingouin_or_valid_scope_note",
+        "points": 15
+      },
+      {
+        "name": "numeric_reporting_when_reproducible",
+        "points": 10
+      },
+      {
+        "name": "interpretation_and_limitations",
+        "points": 10
+      }
+    ],
+    "critical_failures": [
+      "does not use local files",
+      "fabricates numeric results",
+      "ignores repeated-measures or nested structure when visible",
+      "claims Pingouin supports an unsupported model without caveat"
+    ]
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "id": "strict_010_rp_013_rr_013",
+  "source_task_id": "rp_013_rr_013",
+  "paper_title": "Breuer, 2017 registered report",
+  "journal": "Journal of Media Psychology",
+  "paper_url": "https://doi.org/10.1027/1864-1105/a000209",
+  "doi": "10.1027/1864-1105/a000209",
+  "repository_url": "https://osf.io/7cjd6/",
+  "source_language": "English",
+  "pingouin_route_hint": "pingouin-stat-router",
+  "files": [
+    {
+      "kind": "other",
+      "path": "tasks/strict_010_rp_013_rr_013/sources/other/JASP_analyses_results_-_An_examination_of_the_effects_of_supportive_co-playing_and_task_difficulty_on_prosocial_behavior.jasp",
+      "source_url": "https://osf.io/download/crgs2/",
+      "size": 395277
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_010_rp_013_rr_013/sources/data/ReadMe_Data_Analysis.txt",
+      "source_url": "https://osf.io/download/kz52h/",
+      "size": 779
+    },
+    {
+      "kind": "other",
+      "path": "tasks/strict_010_rp_013_rr_013/sources/other/JASP_analyses_results_-_Manipulation_checks_and_confirmatory_analyses_with_all_4_exclusion_criteria.jasp",
+      "source_url": "https://osf.io/download/4uadw/",
+      "size": 54332
+    },
+    {
+      "kind": "script",
+      "path": "tasks/strict_010_rp_013_rr_013/sources/script/Syntax_Descriptives.sps",
+      "source_url": "https://osf.io/download/uhma9/",
+      "size": 3362
+    },
+    {
+      "kind": "script",
+      "path": "tasks/strict_010_rp_013_rr_013/sources/script/Syntax_filter_cases_SPSS_to_JASP.sps",
+      "source_url": "https://osf.io/download/tbhwb/",
+      "size": 3911
+    }
+  ],
+  "script_hints": {
+    "detected_analysis": [],
+    "candidate_variables": [],
+    "analysis_snippets": []
+  },
+  "data_hints": {
+    "ReadMe_Data_Analysis.txt": {
+      "columns": [
+        "Order of analyses for the paper Breuer",
+        " J.",
+        " Velez",
+        " J.",
+        " Bowman",
+        " N. D.",
+        " Wulf",
+        " T.",
+        " & Bente",
+        " G. (2017). �Drive the lane; together",
+        " hard!� An examination of the effects of supportive co-playing and task difficulty on prosocial behavior. Pre-registered study",
+        " manuscript forthcoming in Journal of Media Psychology."
+      ],
+      "sample_rows_counted": 8
+    }
+  },
+  "scoring": {
+    "type": "strict_real_paper_rubric",
+    "max_points": 100,
+    "criteria": [
+      {
+        "name": "uses_local_data_and_scripts",
+        "points": 15
+      },
+      {
+        "name": "identifies_concrete_target_analysis",
+        "points": 15
+      },
+      {
+        "name": "correct_design_and_variable_mapping",
+        "points": 15
+      },
+      {
+        "name": "appropriate_method_and_assumptions",
+        "points": 20
+      },
+      {
+        "name": "executable_python_pingouin_or_valid_scope_note",
+        "points": 15
+      },
+      {
+        "name": "numeric_reporting_when_reproducible",
+        "points": 10
+      },
+      {
+        "name": "interpretation_and_limitations",
+        "points": 10
+      }
+    ],
+    "critical_failures": [
+      "does not use local files",
+      "fabricates numeric results",
+      "ignores repeated-measures or nested structure when visible",
+      "claims Pingouin supports an unsupported model without caveat"
+    ]
+  }
+}

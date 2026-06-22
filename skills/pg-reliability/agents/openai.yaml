@@ -1,0 +1,7 @@
+interface:
+  display_name: "PG Reliability"
+  short_description: "Compute Cronbach alpha and ICC"
+  brand_color: "#1F7665"
+  default_prompt: "Use $pg-reliability to estimate scale reliability or inter-rater ICC."
+policy:
+  allow_implicit_invocation: true

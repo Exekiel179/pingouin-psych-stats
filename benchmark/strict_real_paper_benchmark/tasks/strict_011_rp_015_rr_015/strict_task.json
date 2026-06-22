@@ -1,0 +1,187 @@
+{
+  "id": "strict_011_rp_015_rr_015",
+  "source_task_id": "rp_015_rr_015",
+  "paper_title": "Campbell 2017 registered report",
+  "journal": "Journal of Research in Personality",
+  "paper_url": "https://doi.org/10.1016/j.jrp.2017.04.001",
+  "doi": "10.1016/j.jrp.2017.04.001",
+  "repository_url": "https://osf.io/wb6vc/",
+  "source_language": "English",
+  "pingouin_route_hint": "pingouin-stat-router",
+  "files": [
+    {
+      "kind": "script",
+      "path": "tasks/strict_011_rp_015_rr_015/sources/script/Murray_replication.Rmd",
+      "source_url": "https://osf.io/download/yyrw6/",
+      "size": 15980
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_011_rp_015_rr_015/sources/data/EDC_clean2.csv",
+      "source_url": "https://osf.io/download/n64j9/",
+      "size": 170418
+    }
+  ],
+  "script_hints": {
+    "detected_analysis": [
+      "anova",
+      "t_test",
+      "correlation",
+      "regression",
+      "reliability"
+    ],
+    "candidate_variables": [
+      "ManipCheck",
+      "P24NumNeg",
+      "cSelfEsteem",
+      "dCond",
+      "newdata2",
+      "rMood",
+      "rStateSE",
+      "rzPartnerEnh",
+      "zCloseness",
+      "zPercAccept"
+    ],
+    "analysis_snippets": [
+      "#Now fix up variable names to make it easier to calculate alpha/means later on",
+      "```{r estimate alpha and create scale scores, include=FALSE}",
+      "#Calculate alpha and also add mean score to data frame",
+      "alpha(check.keys = TRUE) %$% keys,",
+      "print(alphaObj$alpha)",
+      "corr.test(newdata, y = NULL, use = \"pairwise\",method=\"pearson\",adjust=\"holm\",alpha=.05) #create correlation matrix with p values",
+      "Cors <- cor(na.omit(newdata)) #create correlation matrix and save as \"Cors\"",
+      "t.test(newdata2$ManipCheck~newdata2$Cond) #t test for difference in ManipCheck between conditions",
+      "t.test(newdata2$P24NumNeg~newdata2$Cond) #t test for differences in guessed number of negative things partner listed",
+      "```{r regression model testing interaction effect, echo=TRUE}",
+      "#regression models",
+      "m1 <- lm(ManipCheck~cSelfEsteem * dCond, data = newdata2) #DV = Manipulation Check"
+    ]
+  },
+  "data_hints": {
+    "EDC_clean2.csv": {
+      "columns": [
+        "CoupleID",
+        "PartID",
+        "Condition",
+        "QuestPack",
+        "Gender",
+        "GenderTEXT",
+        "Age",
+        "RelStat",
+        "RelStatOtherSpecify",
+        "RelLengthYears",
+        "RelLengthMonths",
+        "LiveWPart",
+        "DemoTime",
+        "P03Q01",
+        "P03Q02",
+        "P03Q03",
+        "P03Q04",
+        "P03Q05",
+        "P03Q06",
+        "P03Q07",
+        "P03Q08",
+        "P03Q09",
+        "P03Q10",
+        "P04Q01",
+        "P04Q02",
+        "P04Q03",
+        "P04Q04",
+        "P05Q01",
+        "P05Q02",
+        "P05Q03",
+        "ManipDiff",
+        "Wait",
+        "P07Q01",
+        "P07Q02",
+        "P07Q03",
+        "P07Q04",
+        "P07Q05",
+        "P07Q06",
+        "P07Q07",
+        "P08Q01",
+        "P08Q02",
+        "P08Q03",
+        "P08Q04",
+        "P09Q01",
+        "P09Q02",
+        "P09Q03",
+        "P09Q04",
+        "P09Q05",
+        "P10Q01",
+        "P10Q02",
+        "P10Q03",
+        "P11Q01",
+        "P11Q02",
+        "P11Q03",
+        "P12Q01",
+        "P12Q02",
+        "P12Q03",
+        "P12Q04",
+        "P12Q05",
+        "P12Q06",
+        "P12Q07",
+        "P12Q08",
+        "P12Q09",
+        "P12Q10",
+        "P12Q11",
+        "P12Q12",
+        "P12Q13",
+        "P12Q14",
+        "P13Q01",
+        "P13Q02",
+        "P13Q03",
+        "P13Q04",
+        "P13Q05",
+        "P13Q06",
+        "P13Q07",
+        "P13Q08",
+        "P13Q09",
+        "P13Q10",
+        "P13Q11",
+        "P13Q12"
+      ],
+      "sample_rows_counted": 404
+    }
+  },
+  "scoring": {
+    "type": "strict_real_paper_rubric",
+    "max_points": 100,
+    "criteria": [
+      {
+        "name": "uses_local_data_and_scripts",
+        "points": 15
+      },
+      {
+        "name": "identifies_concrete_target_analysis",
+        "points": 15
+      },
+      {
+        "name": "correct_design_and_variable_mapping",
+        "points": 15
+      },
+      {
+        "name": "appropriate_method_and_assumptions",
+        "points": 20
+      },
+      {
+        "name": "executable_python_pingouin_or_valid_scope_note",
+        "points": 15
+      },
+      {
+        "name": "numeric_reporting_when_reproducible",
+        "points": 10
+      },
+      {
+        "name": "interpretation_and_limitations",
+        "points": 10
+      }
+    ],
+    "critical_failures": [
+      "does not use local files",
+      "fabricates numeric results",
+      "ignores repeated-measures or nested structure when visible",
+      "claims Pingouin supports an unsupported model without caveat"
+    ]
+  }
+}

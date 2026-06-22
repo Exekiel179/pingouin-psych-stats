@@ -1,0 +1,81 @@
+{
+  "id": "strict_003_rp_003_rr_003",
+  "source_task_id": "rp_003_rr_003",
+  "paper_title": "Whillans 2017 registered report",
+  "journal": "Comprehensive Results in Social Psychology",
+  "paper_url": "https://doi.org/10.1080/23743603.2016.1273647",
+  "doi": "10.1080/23743603.2016.1273647",
+  "repository_url": "https://osf.io/aqi5j/",
+  "source_language": "English",
+  "pingouin_route_hint": "pingouin-stat-router",
+  "files": [
+    {
+      "kind": "other",
+      "path": "tasks/strict_003_rp_003_rr_003/sources/other/Stage2_Doc5_RevisedManuscript",
+      "source_url": "https://osf.io/download/3hjsw/",
+      "size": 190712
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_003_rp_003_rr_003/sources/data/2_VolunteeringDataFile_05.09.16_USE_FixedBrokenLink.sav",
+      "source_url": "https://osf.io/download/s5kxz/",
+      "size": 68077
+    },
+    {
+      "kind": "script",
+      "path": "tasks/strict_003_rp_003_rr_003/sources/script/1_BayesSyntax_volunteerStudyBf.R",
+      "source_url": "https://osf.io/download/zagkx/",
+      "size": 5890
+    }
+  ],
+  "script_hints": {
+    "detected_analysis": [],
+    "candidate_variables": [],
+    "analysis_snippets": []
+  },
+  "data_hints": {
+    "2_VolunteeringDataFile_05.09.16_USE_FixedBrokenLink.sav": {
+      "note": ".sav file; inspect with pandas/pyreadstat/R as appropriate"
+    }
+  },
+  "scoring": {
+    "type": "strict_real_paper_rubric",
+    "max_points": 100,
+    "criteria": [
+      {
+        "name": "uses_local_data_and_scripts",
+        "points": 15
+      },
+      {
+        "name": "identifies_concrete_target_analysis",
+        "points": 15
+      },
+      {
+        "name": "correct_design_and_variable_mapping",
+        "points": 15
+      },
+      {
+        "name": "appropriate_method_and_assumptions",
+        "points": 20
+      },
+      {
+        "name": "executable_python_pingouin_or_valid_scope_note",
+        "points": 15
+      },
+      {
+        "name": "numeric_reporting_when_reproducible",
+        "points": 10
+      },
+      {
+        "name": "interpretation_and_limitations",
+        "points": 10
+      }
+    ],
+    "critical_failures": [
+      "does not use local files",
+      "fabricates numeric results",
+      "ignores repeated-measures or nested structure when visible",
+      "claims Pingouin supports an unsupported model without caveat"
+    ]
+  }
+}

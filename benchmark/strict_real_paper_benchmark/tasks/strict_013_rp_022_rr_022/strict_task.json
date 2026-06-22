@@ -1,0 +1,143 @@
+{
+  "id": "strict_013_rp_022_rr_022",
+  "source_task_id": "rp_022_rr_022",
+  "paper_title": "Arpin 2017 registered report",
+  "journal": "Comprehensive Results in Social Psychology",
+  "paper_url": "https://doi.org/10.1080/23743603.2017.1358477",
+  "doi": "10.1080/23743603.2017.1358477",
+  "repository_url": "https://osf.io/4mwn3/",
+  "source_language": "English",
+  "pingouin_route_hint": "pingouin-stat-router",
+  "files": [
+    {
+      "kind": "data",
+      "path": "tasks/strict_013_rp_022_rr_022/sources/data/Pilot_Anonymized_Data.csv",
+      "source_url": "https://osf.io/download/a58kj/",
+      "size": 7081
+    },
+    {
+      "kind": "doc",
+      "path": "tasks/strict_013_rp_022_rr_022/sources/doc/Pilot_Results.pdf",
+      "source_url": "https://osf.io/download/ccqx7/",
+      "size": 715631
+    },
+    {
+      "kind": "script",
+      "path": "tasks/strict_013_rp_022_rr_022/sources/script/Pilot_Syntax_Code.r",
+      "source_url": "https://osf.io/download/yefx8/",
+      "size": 6620
+    },
+    {
+      "kind": "doc",
+      "path": "tasks/strict_013_rp_022_rr_022/sources/doc/Pilot_Codebook.pdf",
+      "source_url": "https://osf.io/download/rxspv/",
+      "size": 473646
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_013_rp_022_rr_022/sources/data/codebook_OstracismIngroupOutgroup.xls",
+      "source_url": "https://osf.io/download/sz9tg/",
+      "size": 83456
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_013_rp_022_rr_022/sources/data/OstracismIngroupOutgroupRawDataAnonymized.xlsx",
+      "source_url": "https://osf.io/download/8hupw/",
+      "size": 434347
+    },
+    {
+      "kind": "script",
+      "path": "tasks/strict_013_rp_022_rr_022/sources/script/RcodeOstracismIngroupOutgroup.r",
+      "source_url": "https://osf.io/download/w7th8/",
+      "size": 31528
+    }
+  ],
+  "script_hints": {
+    "detected_analysis": [
+      "anova",
+      "t_test",
+      "correlation",
+      "regression",
+      "reliability"
+    ],
+    "candidate_variables": [
+      "density",
+      "drink",
+      "fatrate",
+      "groupstatusc",
+      "idtot",
+      "jantemp",
+      "style",
+      "wdiffattrib",
+      "wdiffattribmoy"
+    ],
+    "analysis_snippets": [
+      "# contains the variables implied in the regression model.",
+      "# formula\tthe regression equation to be used",
+      "fit <- lm(monModel,DF)",
+      "alpha(data.frame(data.frame(DF$id1,DF$id2,DF$id3,DF$id4)))",
+      "t.test(DF$idtot,mu=4) #  t = 2.32, p = .023",
+      "fit<-lm(DF$idtot0~1,DF)",
+      "cor.test(DF$attention_offender1,DF$attention_offender2)",
+      "cor.test(DF$influence_offender1,DF$influence_offender2)",
+      "cor.test(DF$inclusion_offender1,DF$inclusion_offender2)",
+      "cor.test(DF$teamwork_offender1,DF$teamwork_offender2)  # r = .98",
+      "cor.test(DF$angry_offender1,DF$angry_offender2) # r = .97",
+      "cor.test(DF$sympathy_offender1,DF$sympathy_offender2) # r = .99"
+    ]
+  },
+  "data_hints": {
+    "Pilot_Anonymized_Data.csv": {
+      "columns": [
+        "lfdn;c_0002;c_0003;c_0004;c_0005;voluntary;agreement;U.S.citizen;CONTROL_carefully;teamwork_offender1;teamwork_victim;teamwork_offender2;angry_offender1;angry_victim;angry_offender2;sympathy_offender1;sympathy_victim;sympathy_offender2;victim_unfair;offender_punish;victims_fault;offenders_noreason;victim_notblameable;offender_different;attention_offender1;attention_victim;attention_offender2;influence_offender1;influence_victim;influence_offender2;inclusion_offender1;consideration_offender1;inclusion_victim;consideration_victim;inclusion_offender2;consideration_offender2;attention_check1;attention_check2;attention_check3;closeness_reality;valence_discussion;perceptionstyle_guess;psstyle1;psstyle2;psstyle3;psstyle4;psstyle5;psstyle6;psstyle7;psstyle8;psstyle9;psstyle10;identification_focal1;identification_focal2;identification_focal3;identification_focal4;identification_local1;identification_local2;identification_local3;identification_local4;spamcheck;Sex;Area.Study;Residence;Age;NativeTongue;NativeTongue_open;seriousness;use_data;comments"
+      ],
+      "sample_rows_counted": 29
+    },
+    "codebook_OstracismIngroupOutgroup.xls": {
+      "note": ".xls file; inspect with pandas/pyreadstat/R as appropriate"
+    },
+    "OstracismIngroupOutgroupRawDataAnonymized.xlsx": {
+      "note": ".xlsx file; inspect with pandas/pyreadstat/R as appropriate"
+    }
+  },
+  "scoring": {
+    "type": "strict_real_paper_rubric",
+    "max_points": 100,
+    "criteria": [
+      {
+        "name": "uses_local_data_and_scripts",
+        "points": 15
+      },
+      {
+        "name": "identifies_concrete_target_analysis",
+        "points": 15
+      },
+      {
+        "name": "correct_design_and_variable_mapping",
+        "points": 15
+      },
+      {
+        "name": "appropriate_method_and_assumptions",
+        "points": 20
+      },
+      {
+        "name": "executable_python_pingouin_or_valid_scope_note",
+        "points": 15
+      },
+      {
+        "name": "numeric_reporting_when_reproducible",
+        "points": 10
+      },
+      {
+        "name": "interpretation_and_limitations",
+        "points": 10
+      }
+    ],
+    "critical_failures": [
+      "does not use local files",
+      "fabricates numeric results",
+      "ignores repeated-measures or nested structure when visible",
+      "claims Pingouin supports an unsupported model without caveat"
+    ]
+  }
+}

@@ -1,0 +1,156 @@
+{
+  "id": "strict_008_rp_011_rr_011",
+  "source_task_id": "rp_011_rr_011",
+  "paper_title": "Wagenmakers 2015 registered report",
+  "journal": "Frontiers in Psychology",
+  "paper_url": "https://doi.org/10.3389/fpsyg.2015.00494",
+  "doi": "10.3389/fpsyg.2015.00494",
+  "repository_url": "https://osf.io/uszvx/",
+  "source_language": "English",
+  "pingouin_route_hint": "pingouin-stat-router",
+  "files": [
+    {
+      "kind": "data",
+      "path": "tasks/strict_008_rp_011_rr_011/sources/data/Data_Final.csv",
+      "source_url": "https://osf.io/download/yvrzw/",
+      "size": 8513
+    },
+    {
+      "kind": "script",
+      "path": "tasks/strict_008_rp_011_rr_011/sources/script/Analysis_Graphs.R",
+      "source_url": "https://osf.io/download/9t7qg/",
+      "size": 26336
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_008_rp_011_rr_011/sources/data/readme.txt",
+      "source_url": "https://osf.io/download/pdzyn/",
+      "size": 6773
+    },
+    {
+      "kind": "other",
+      "path": "tasks/strict_008_rp_011_rr_011/sources/other/Rawdata.zip",
+      "source_url": "https://osf.io/download/nhtws/",
+      "size": 91167
+    },
+    {
+      "kind": "doc",
+      "path": "tasks/strict_008_rp_011_rr_011/sources/doc/Preregistration_TopolinskiSparenberg.pdf",
+      "source_url": "https://osf.io/download/p3isc/",
+      "size": 71755
+    },
+    {
+      "kind": "other",
+      "path": "tasks/strict_008_rp_011_rr_011/sources/other/Figure1_ExperimentalSetting.png",
+      "source_url": "https://osf.io/download/jvg5b/",
+      "size": 599631
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_008_rp_011_rr_011/sources/data/ExitInterviews.xlsx",
+      "source_url": "https://osf.io/download/qvz5x/",
+      "size": 51551
+    },
+    {
+      "kind": "data",
+      "path": "tasks/strict_008_rp_011_rr_011/sources/data/datafile_order.csv",
+      "source_url": "https://osf.io/download/2dykx/",
+      "size": 2458
+    }
+  ],
+  "script_hints": {
+    "detected_analysis": [],
+    "candidate_variables": [],
+    "analysis_snippets": []
+  },
+  "data_hints": {
+    "Data_Final.csv": {
+      "columns": [
+        "ParticipantNumber",
+        "Condition",
+        "q1_check",
+        "q2_check",
+        "q1_NEO",
+        "q2_NEO",
+        "q3_NEO",
+        "q4_NEO",
+        "q5_NEO",
+        "q6_NEO",
+        "q7_NEO",
+        "q8_NEO",
+        "q9_NEO",
+        "q10_NEO",
+        "q11_NEO",
+        "q12_NEO",
+        "mean_NEO",
+        "q3_check",
+        "q4_check",
+        "Include",
+        "Rotation",
+        "Age",
+        "Sex",
+        "Student",
+        "Major.Occupation"
+      ],
+      "sample_rows_counted": 102
+    },
+    "readme.txt": {
+      "columns": [
+        "Explanation of the documents for the replication attempt:"
+      ],
+      "sample_rows_counted": 61
+    },
+    "ExitInterviews.xlsx": {
+      "note": ".xlsx file; inspect with pandas/pyreadstat/R as appropriate"
+    },
+    "datafile_order.csv": {
+      "columns": [
+        "ParticipantNumber",
+        "mean_NEO",
+        "Rotation",
+        "Order"
+      ],
+      "sample_rows_counted": 110
+    }
+  },
+  "scoring": {
+    "type": "strict_real_paper_rubric",
+    "max_points": 100,
+    "criteria": [
+      {
+        "name": "uses_local_data_and_scripts",
+        "points": 15
+      },
+      {
+        "name": "identifies_concrete_target_analysis",
+        "points": 15
+      },
+      {
+        "name": "correct_design_and_variable_mapping",
+        "points": 15
+      },
+      {
+        "name": "appropriate_method_and_assumptions",
+        "points": 20
+      },
+      {
+        "name": "executable_python_pingouin_or_valid_scope_note",
+        "points": 15
+      },
+      {
+        "name": "numeric_reporting_when_reproducible",
+        "points": 10
+      },
+      {
+        "name": "interpretation_and_limitations",
+        "points": 10
+      }
+    ],
+    "critical_failures": [
+      "does not use local files",
+      "fabricates numeric results",
+      "ignores repeated-measures or nested structure when visible",
+      "claims Pingouin supports an unsupported model without caveat"
+    ]
+  }
+}

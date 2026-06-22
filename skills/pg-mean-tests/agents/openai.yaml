@@ -1,0 +1,7 @@
+interface:
+  display_name: "PG Mean Tests"
+  short_description: "Run t tests and corrected pairwise tests"
+  brand_color: "#1F7665"
+  default_prompt: "Use $pg-mean-tests to compare groups or paired conditions with Pingouin."
+policy:
+  allow_implicit_invocation: true
