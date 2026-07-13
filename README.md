@@ -4,7 +4,7 @@
 >
 > 一个安全优先的小型插件，把心理学统计需求路由到精简的 [Pingouin](https://pingouin-stats.org/) 工作流 —— 内置假设检验、正确函数选择、可复现 Python 代码与 APA 规范报告。
 
-**License:** MIT · **Plugin type:** Codex skill plugin · **Source of truth:** https://pingouin-stats.org/
+**License:** MIT · **Plugin type:** Skill plugin for Claude Code, Codex & other AI agents · **Source of truth:** https://pingouin-stats.org/
 
 ---
 
@@ -12,7 +12,7 @@
 
 ### What this is
 
-`pingouin-psych-stats` is a Codex plugin for psychology researchers who analyze data with [Pingouin](https://pingouin-stats.org/). Instead of one large prompt, it is deliberately split into **small skills** so the agent loads only the workflow it actually needs. This keeps token usage low and makes the statistical supervision explicit and auditable.
+`pingouin-psych-stats` is a skill plugin for AI coding agents (Claude Code, Codex, and others), aimed at psychology researchers who analyze data with [Pingouin](https://pingouin-stats.org/). Instead of one large prompt, it is deliberately split into **small skills** so the agent loads only the workflow it actually needs. This keeps token usage low and makes the statistical supervision explicit and auditable.
 
 The plugin emphasizes:
 
@@ -57,7 +57,9 @@ Example audit line: `Audit: S0 pass; S1 checked; S2 pass; S3 partial; S4 output-
 
 ```
 pingouin-psych-stats/
-├── .codex-plugin/plugin.json   # Plugin manifest (name, skills path, interface)
+├── .claude-plugin/plugin.json      # Claude Code plugin manifest
+├── .claude-plugin/marketplace.json # Claude Code marketplace entry (installable via /plugin)
+├── .codex-plugin/plugin.json       # Codex plugin manifest (name, skills path, interface)
 ├── skills/                     # The 11 skills above (each a SKILL.md + agents/openai.yaml)
 ├── references/                 # Routing index, supervision gates, API quickref, APA template
 ├── scripts/                    # pingouin_template.py + skill quality checks
@@ -68,7 +70,20 @@ pingouin-psych-stats/
 
 ### Quick start
 
-This is a Codex skill plugin — point your Codex/agent environment at this directory so it discovers `.codex-plugin/plugin.json` and the `skills/` folder. Then drive it with prompts such as:
+This is a skill plugin for AI coding agents (Claude Code, Codex, and others).
+
+**Install in Claude Code** — straight from GitHub:
+
+```bash
+/plugin marketplace add Exekiel179/pingouin-psych-stats
+/plugin install pingouin-psych-stats@pingouin-stats
+```
+
+To try it before pushing, run `/plugin marketplace add ./` from a local checkout of this repo, then the same install line. The 11 skills load automatically and Claude invokes them by task (or name).
+
+**Codex / other agents** — point your agent environment at this directory so it discovers the `skills/` folder (Codex additionally reads the `.codex-plugin/plugin.json` manifest).
+
+Then drive it with prompts such as:
 
 - "Use `pingouin-stat-router` to choose the right analysis."
 - "Run `pg-anova` for my repeated-measures design."
@@ -95,7 +110,7 @@ Pingouin is the right tool for many psychology designs, but **not all**. The plu
 
 ### 这是什么
 
-`pingouin-psych-stats` 是一个面向心理学研究者的 Codex 插件，用于通过 [Pingouin](https://pingouin-stats.org/) 进行数据分析。它没有把所有逻辑塞进一个大提示词，而是刻意拆分成**多个小技能（skills）**，让智能体只加载当前真正需要的工作流。这样既能降低 token 消耗，也让统计监督变得显式、可审计。
+`pingouin-psych-stats` 是一个面向心理学研究者的技能插件，支持 Claude Code、Codex 等 AI 编程智能体，用于通过 [Pingouin](https://pingouin-stats.org/) 进行数据分析。它没有把所有逻辑塞进一个大提示词，而是刻意拆分成**多个小技能（skills）**，让智能体只加载当前真正需要的工作流。这样既能降低 token 消耗，也让统计监督变得显式、可审计。
 
 插件强调：
 
@@ -140,7 +155,9 @@ Pingouin is the right tool for many psychology designs, but **not all**. The plu
 
 ```
 pingouin-psych-stats/
-├── .codex-plugin/plugin.json   # 插件清单（名称、技能路径、界面信息）
+├── .claude-plugin/plugin.json      # Claude Code 插件清单
+├── .claude-plugin/marketplace.json # Claude Code marketplace 条目（可用 /plugin 安装）
+├── .codex-plugin/plugin.json       # Codex 插件清单（名称、技能路径、界面信息）
 ├── skills/                     # 上述 11 个技能（每个含 SKILL.md + agents/openai.yaml）
 ├── references/                 # 路由索引、监督关卡、API 速查、APA 模板
 ├── scripts/                    # pingouin_template.py + 技能质量检查脚本
@@ -151,7 +168,20 @@ pingouin-psych-stats/
 
 ### 快速开始
 
-这是一个 Codex 技能插件 —— 让你的 Codex / 智能体环境指向本目录，使其能发现 `.codex-plugin/plugin.json` 与 `skills/` 文件夹。然后用如下提示词驱动它：
+这是一个面向 AI 编程智能体（Claude Code、Codex 等）的技能插件。
+
+**在 Claude Code 中安装** —— 直接从 GitHub 装：
+
+```bash
+/plugin marketplace add Exekiel179/pingouin-psych-stats
+/plugin install pingouin-psych-stats@pingouin-stats
+```
+
+想在推送前先试用，可在本仓库的本地副本根目录运行 `/plugin marketplace add ./`，再执行同样的 install 命令。11 个技能会自动加载，Claude 按任务（或名称）调用它们。
+
+**Codex / 其他智能体** —— 让你的智能体环境指向本目录，使其能发现 `skills/` 文件夹（Codex 会额外读取 `.codex-plugin/plugin.json` 清单）。
+
+然后用如下提示词驱动它：
 
 - "用 `pingouin-stat-router` 选择合适的分析方法。"
 - "为我的重复测量设计运行 `pg-anova`。"

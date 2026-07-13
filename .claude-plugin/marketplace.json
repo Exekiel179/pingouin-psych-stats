@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "pingouin-stats",
+  "description": "Safety-first Pingouin workflows for psychology statistics: assumption checks, S0–S5 supervision gates, reproducible Python, and APA-style reporting.",
+  "owner": {
+    "name": "Exekiel179",
+    "url": "https://github.com/Exekiel179"
+  },
+  "plugins": [
+    {
+      "name": "pingouin-psych-stats",
+      "source": "./",
+      "description": "Small, safety-first Pingouin workflows for psychology statistics — assumption checks, S0–S5 supervision gates, reproducible Python, and APA-style reporting.",
+      "author": {
+        "name": "Local Research Tools"
+      },
+      "keywords": [
+        "pingouin",
+        "psychology",
+        "statistics",
+        "apa"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "pingouin-psych-stats",
+  "displayName": "Pingouin Psych Stats",
+  "version": "0.1.0",
+  "description": "Small, safety-first Pingouin workflows for psychology statistics — assumption checks, S0–S5 supervision gates, reproducible Python, and APA-style reporting.",
+  "author": {
+    "name": "Local Research Tools"
+  },
+  "homepage": "https://github.com/Exekiel179/pingouin-psych-stats",
+  "repository": "https://github.com/Exekiel179/pingouin-psych-stats",
+  "license": "MIT",
+  "keywords": [
+    "pingouin",
+    "psychology",
+    "statistics",
+    "anova",
+    "correlation",
+    "power",
+    "apa"
+  ]
+}
