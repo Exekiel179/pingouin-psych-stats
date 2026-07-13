@@ -59,6 +59,23 @@ Notes:
 - For repeated-measures designs, check sphericity before interpreting uncorrected p-values.
 - Typical columns include `Source`, `SS`, `DF`, `MS`, `F`, `p-unc`, `np2`, and sometimes sphericity-related columns such as `eps`, `p-GG-corr`, `W-spher`, `p-spher`, `sphericity`.
 - Follow significant omnibus tests with planned or corrected pairwise comparisons using `pg.pairwise_tests`.
+- After a Welch ANOVA, use `pg.pairwise_gameshowell`; after a standard ANOVA, `pg.pairwise_tukey` is an option.
+
+## Non-parametric
+
+```python
+pg.mwu(x, y, alternative="two-sided")                          # 2 independent groups
+pg.wilcoxon(x, y, alternative="two-sided")                     # paired / signed-rank
+pg.kruskal(data=df, dv="score", between="group")               # k independent groups
+pg.friedman(data=df, dv="score", within="cond", subject="id")  # k repeated conditions
+pg.cochran(data=df, dv="passed", within="cond", subject="id")  # binary repeated
+```
+
+Notes:
+
+- `mwu`/`wilcoxon` return `U_val`/`W_val`, `p_val`, `RBC` (rank-biserial), `CLES`.
+- `kruskal` returns `H`, `p_unc`; `friedman` returns Kendall `W`, `Q`, `p_unc`; `cochran` returns `Q`, `p_unc`.
+- Follow a significant omnibus with `pg.pairwise_tests(..., parametric=False, padjust="holm")`.
 
 ## Assumption Checks
 
@@ -77,9 +94,25 @@ pg.corr(x=df["x"], y=df["y"], method="pearson", alternative="two-sided")
 pg.partial_corr(data=df, x="x", y="y", covar=["age", "baseline"], method="pearson")
 pg.pairwise_corr(data=df, columns=["x", "y", "z"], method="spearman", padjust="holm")
 pg.rm_corr(data=df, x="x", y="y", subject="id")
+pg.distance_corr(df["x"], df["y"])   # nonlinear dependence screening (0 = independent)
 ```
 
 Common output columns include `n`, `r`, `CI95%`, `p-val`, `BF10`, and `power`.
+
+## Categorical / Contingency
+
+```python
+expected, observed, stats = pg.chi2_independence(data=df, x="group", y="response")
+observed2, mcnemar = pg.chi2_mcnemar(data=df, x="before", y="after")   # paired 0/1
+ct = pg.dichotomous_crosstab(data=df, x="cond_a", y="cond_b")
+pg.power_chi2(dof=1, w=0.3, n=100, alpha=0.05)                          # n=None to solve n
+```
+
+Notes:
+
+- `chi2_independence` returns `(expected, observed, stats)`; read the `pearson` row of `stats` (`chi2`, `dof`, `pval`, `cramer`, `power`).
+- `chi2_mcnemar` needs paired dichotomous columns; returns `(observed, stats)` with `chi2`, `dof`, `p_approx`, `p_exact`.
+- Report Cramér's V (effect size) and the contingency table, not only the p-value.
 
 ## Regression And Mediation
 
@@ -105,6 +138,20 @@ pg.intraclass_corr(data=df, targets="target", raters="rater", ratings="rating")
 ```
 
 For ICC, report the exact ICC type and whether the design is one-way/two-way, single/average, consistency/agreement.
+
+## Bayesian
+
+```python
+tt = pg.ttest(x, y); tt["BF10"]                      # BF10 already in ttest / corr output
+pg.bayesfactor_ttest(t, nx, ny=None, paired=False, r=0.707)
+pg.bayesfactor_pearson(r=0.30, n=60)
+pg.bayesfactor_binom(k=55, n=100, p=0.5)
+```
+
+Notes:
+
+- BF10 > 1 favors the alternative, < 1 favors the null; BF01 = 1 / BF10.
+- State the prior scale `r`; the Bayes factor depends on it.
 
 ## Power
 

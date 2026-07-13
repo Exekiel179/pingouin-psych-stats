@@ -1,0 +1,7 @@
+interface:
+  display_name: "PG Bayesian"
+  short_description: "Bayes factors for t tests, correlations, and proportions"
+  brand_color: "#1F7665"
+  default_prompt: "Use $pg-bayesian to compute Bayes factors alongside p-values."
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,7 @@
+interface:
+  display_name: "PG Nonparametric"
+  short_description: "Rank tests: Mann-Whitney, Wilcoxon, Kruskal, Friedman, Cochran"
+  brand_color: "#1F7665"
+  default_prompt: "Use $pg-nonparametric for rank-based tests when parametric assumptions fail."
+policy:
+  allow_implicit_invocation: true

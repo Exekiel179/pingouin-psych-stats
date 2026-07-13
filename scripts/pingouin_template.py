@@ -155,6 +155,126 @@ TEMPLATES = {
                            alpha=0.05, contrast="two-samples")
         print({"required_n_per_group": n})
     """,
+    "welch-anova": """
+        import pandas as pd
+        import pingouin as pg
+
+        df = pd.read_csv("data.csv")
+        aov = pg.welch_anova(data=df, dv="score", between="group").round(3)
+        pg.print_table(aov)
+
+        posthoc = pg.pairwise_gameshowell(data=df, dv="score",
+                                          between="group").round(3)
+        pg.print_table(posthoc)
+    """,
+    "ancova": """
+        import pandas as pd
+        import pingouin as pg
+
+        df = pd.read_csv("data.csv")
+        res = pg.ancova(data=df, dv="score", between="group",
+                        covar="baseline").round(3)
+        pg.print_table(res)
+    """,
+    "pairwise-corr": """
+        import pandas as pd
+        import pingouin as pg
+
+        df = pd.read_csv("data.csv")
+        res = pg.pairwise_corr(data=df, columns=["x", "y", "z"],
+                               method="spearman", padjust="holm").round(3)
+        pg.print_table(res)
+    """,
+    "rm-corr": """
+        import pandas as pd
+        import pingouin as pg
+
+        df = pd.read_csv("data_long.csv")
+        res = pg.rm_corr(data=df, x="x", y="y", subject="id").round(3)
+        pg.print_table(res)
+    """,
+    "mwu": """
+        import pandas as pd
+        import pingouin as pg
+
+        df = pd.read_csv("data.csv")
+        x = df.loc[df["group"].eq("A"), "score"]
+        y = df.loc[df["group"].eq("B"), "score"]
+        res = pg.mwu(x, y, alternative="two-sided").round(3)
+        pg.print_table(res)
+    """,
+    "wilcoxon": """
+        import pandas as pd
+        import pingouin as pg
+
+        df = pd.read_csv("data.csv")
+        res = pg.wilcoxon(df["pre"], df["post"], alternative="two-sided").round(3)
+        pg.print_table(res)
+    """,
+    "kruskal": """
+        import pandas as pd
+        import pingouin as pg
+
+        df = pd.read_csv("data.csv")
+        res = pg.kruskal(data=df, dv="score", between="group").round(3)
+        pg.print_table(res)
+
+        posthoc = pg.pairwise_tests(data=df, dv="score", between="group",
+                                    parametric=False, padjust="holm").round(3)
+        pg.print_table(posthoc)
+    """,
+    "friedman": """
+        import pandas as pd
+        import pingouin as pg
+
+        df = pd.read_csv("data_long.csv")
+        res = pg.friedman(data=df, dv="score", within="condition",
+                          subject="id").round(3)
+        pg.print_table(res)
+    """,
+    "cochran": """
+        import pandas as pd
+        import pingouin as pg
+
+        df = pd.read_csv("data_long.csv")
+        res = pg.cochran(data=df, dv="passed", within="condition",
+                         subject="id").round(3)
+        pg.print_table(res)
+    """,
+    "chi2": """
+        import pandas as pd
+        import pingouin as pg
+
+        df = pd.read_csv("data.csv")
+        expected, observed, stats = pg.chi2_independence(data=df, x="group",
+                                                         y="response")
+        pg.print_table(stats.round(3))   # read the "pearson" row
+    """,
+    "mcnemar": """
+        import pandas as pd
+        import pingouin as pg
+
+        df = pd.read_csv("data.csv")   # before/after must be dichotomous (0/1)
+        observed, stats = pg.chi2_mcnemar(data=df, x="before", y="after")
+        pg.print_table(stats.round(3))
+    """,
+    "bayes-ttest": """
+        import pandas as pd
+        import pingouin as pg
+
+        df = pd.read_csv("data.csv")
+        x = df.loc[df["group"].eq("A"), "score"]
+        y = df.loc[df["group"].eq("B"), "score"]
+        tt = pg.ttest(x, y, paired=False)
+        bf = pg.bayesfactor_ttest(float(tt["T"].iloc[0]), nx=len(x), ny=len(y))
+        print({"BF10": round(float(bf), 3)})
+    """,
+    "bayes-corr": """
+        import pingouin as pg
+
+        bf = pg.bayesfactor_pearson(r=0.30, n=60)
+        print({"BF10": round(float(bf), 3)})
+    """,
 }
 
 

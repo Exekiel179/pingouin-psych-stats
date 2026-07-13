@@ -11,6 +11,10 @@ Use these prompts to forward-test routing and supervision without leaking expect
 | Is stress related to sleep quality after controlling age and baseline depression? | `pg-correlations` | S0 covariates, S5 non-causal |
 | Predict dropout yes/no from motivation and age. | `pg-regression-mediation` | S0 binary outcome, S2 logistic signature |
 | Does self-efficacy mediate intervention effects on wellbeing? | `pg-regression-mediation` | S0 path variables, S5 causal caveat |
+| Compare two groups on a skewed reaction-time score with small n. | `pg-nonparametric` | S3 non-normal, rank-based test |
+| Is therapy type associated with relapse (yes/no)? | `pg-categorical` | S0 R x C, chi-square, Cramér's V |
+| Did symptom presence change from pre to post in the same patients? | `pg-categorical` | S0 paired binary, McNemar |
+| How strong is the Bayesian evidence for the group difference? | `pg-bayesian` | S4 BF10, prior scale |
 | Estimate reliability for a six-item resilience scale. | `pg-reliability` | S1 item columns, S5 alpha caveat |
 | Three clinicians rated the same interviews; compute inter-rater reliability. | `pg-reliability` | S0 ICC model, S1 target-rater pairs |
 | How many participants do I need for r = .30, 80% power? | `pg-power` | S0 alpha/power defaults |

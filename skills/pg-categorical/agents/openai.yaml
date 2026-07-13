@@ -1,0 +1,7 @@
+interface:
+  display_name: "PG Categorical"
+  short_description: "Chi-square, McNemar, and contingency tables"
+  brand_color: "#1F7665"
+  default_prompt: "Use $pg-categorical for chi-square and contingency-table analyses."
+policy:
+  allow_implicit_invocation: true

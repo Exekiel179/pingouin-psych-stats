@@ -33,6 +33,9 @@ The plugin emphasizes:
 | `pg-anova` | One-way, factorial, repeated-measures, mixed, Welch ANOVA, ANCOVA. | `anova`, `welch_anova`, `rm_anova`, `mixed_anova`, `ancova` |
 | `pg-correlations` | Pearson / Spearman / Kendall, partial, repeated-measures, pairwise. | `corr`, `partial_corr`, `pairwise_corr`, `rm_corr` |
 | `pg-regression-mediation` | OLS, logistic regression, mediation analysis. | `linear_regression`, `logistic_regression`, `mediation_analysis` |
+| `pg-nonparametric` | Mann-Whitney, Wilcoxon, Kruskal-Wallis, Friedman, Cochran Q rank tests. | `mwu`, `wilcoxon`, `kruskal`, `friedman`, `cochran` |
+| `pg-categorical` | Chi-square independence, McNemar, 2x2 crosstabs, chi-square power. | `chi2_independence`, `chi2_mcnemar`, `dichotomous_crosstab`, `power_chi2` |
+| `pg-bayesian` | Bayes factors for t tests, correlations, and proportions. | `bayesfactor_ttest`, `bayesfactor_pearson`, `bayesfactor_binom` |
 | `pg-reliability` | Internal consistency and rater reliability. | `cronbach_alpha`, `intraclass_corr` |
 | `pg-power` | Sample-size, achieved-power, detectable-effect planning. | `power_ttest`, `power_anova`, `power_corr`, … |
 | `pg-reporting` | APA-style tables and concise CN/EN result prose. | `print_table` + result objects |
@@ -60,7 +63,7 @@ pingouin-psych-stats/
 ├── .claude-plugin/plugin.json      # Claude Code plugin manifest
 ├── .claude-plugin/marketplace.json # Claude Code marketplace entry (installable via /plugin)
 ├── .codex-plugin/plugin.json       # Codex plugin manifest (name, skills path, interface)
-├── skills/                     # The 11 skills above (each a SKILL.md + agents/openai.yaml)
+├── skills/                     # The 14 skills above (each a SKILL.md + agents/openai.yaml)
 ├── references/                 # Routing index, supervision gates, API quickref, APA template
 ├── scripts/                    # pingouin_template.py + skill quality checks
 └── benchmark/                  # Mini benchmark comparing baseline vs. plugin-guided runs
@@ -79,7 +82,7 @@ This is a skill plugin for AI coding agents (Claude Code, Codex, and others).
 /plugin install pingouin-psych-stats@pingouin-stats
 ```
 
-To try it before pushing, run `/plugin marketplace add ./` from a local checkout of this repo, then the same install line. The 11 skills load automatically and Claude invokes them by task (or name).
+To try it before pushing, run `/plugin marketplace add ./` from a local checkout of this repo, then the same install line. The 14 skills load automatically and Claude invokes them by task (or name).
 
 **Codex / other agents** — point your agent environment at this directory so it discovers the `skills/` folder (Codex additionally reads the `.codex-plugin/plugin.json` manifest).
 
@@ -131,6 +134,9 @@ Pingouin is the right tool for many psychology designs, but **not all**. The plu
 | `pg-anova` | 单因素、析因、重复测量、混合、Welch ANOVA、ANCOVA。 | `anova`、`welch_anova`、`rm_anova`、`mixed_anova`、`ancova` |
 | `pg-correlations` | Pearson / Spearman / Kendall、偏相关、重复测量、两两相关。 | `corr`、`partial_corr`、`pairwise_corr`、`rm_corr` |
 | `pg-regression-mediation` | OLS、逻辑回归、中介分析。 | `linear_regression`、`logistic_regression`、`mediation_analysis` |
+| `pg-nonparametric` | Mann-Whitney、Wilcoxon、Kruskal-Wallis、Friedman、Cochran Q 等秩检验。 | `mwu`、`wilcoxon`、`kruskal`、`friedman`、`cochran` |
+| `pg-categorical` | 卡方独立性、McNemar、2x2 列联表、卡方效能。 | `chi2_independence`、`chi2_mcnemar`、`dichotomous_crosstab`、`power_chi2` |
+| `pg-bayesian` | t 检验、相关、比例的贝叶斯因子。 | `bayesfactor_ttest`、`bayesfactor_pearson`、`bayesfactor_binom` |
 | `pg-reliability` | 内部一致性与评分者信度。 | `cronbach_alpha`、`intraclass_corr` |
 | `pg-power` | 样本量、已达成效能、可检测效应量的规划。 | `power_ttest`、`power_anova`、`power_corr` …… |
 | `pg-reporting` | APA 风格表格与简洁的中英文结果文字。 | `print_table` + 结果对象 |
@@ -158,7 +164,7 @@ pingouin-psych-stats/
 ├── .claude-plugin/plugin.json      # Claude Code 插件清单
 ├── .claude-plugin/marketplace.json # Claude Code marketplace 条目（可用 /plugin 安装）
 ├── .codex-plugin/plugin.json       # Codex 插件清单（名称、技能路径、界面信息）
-├── skills/                     # 上述 11 个技能（每个含 SKILL.md + agents/openai.yaml）
+├── skills/                     # 上述 14 个技能（每个含 SKILL.md + agents/openai.yaml）
 ├── references/                 # 路由索引、监督关卡、API 速查、APA 模板
 ├── scripts/                    # pingouin_template.py + 技能质量检查脚本
 └── benchmark/                  # 对比「无插件」与「插件引导」运行的小型基准测试
@@ -177,7 +183,7 @@ pingouin-psych-stats/
 /plugin install pingouin-psych-stats@pingouin-stats
 ```
 
-想在推送前先试用，可在本仓库的本地副本根目录运行 `/plugin marketplace add ./`，再执行同样的 install 命令。11 个技能会自动加载，Claude 按任务（或名称）调用它们。
+想在推送前先试用，可在本仓库的本地副本根目录运行 `/plugin marketplace add ./`，再执行同样的 install 命令。14 个技能会自动加载，Claude 按任务（或名称）调用它们。
 
 **Codex / 其他智能体** —— 让你的智能体环境指向本目录，使其能发现 `skills/` 文件夹（Codex 会额外读取 `.codex-plugin/plugin.json` 清单）。
 

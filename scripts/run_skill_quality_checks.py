@@ -22,6 +22,12 @@ EXPECTED_SIGNATURE_BITS = {
     "logistic_regression": ["X", "y", "remove_na"],
     "mediation_analysis": ["n_boot", "seed", "return_dist"],
     "power_ttest": ["alternative"],
+    "mwu": ["alternative"],
+    "kruskal": ["between", "detailed"],
+    "friedman": ["within", "subject"],
+    "chi2_independence": ["correction"],
+    "power_chi2": ["dof", "w", "power"],
+    "bayesfactor_ttest": ["paired", "r"],
 }
 
 ROUTING_SCENARIOS = [
@@ -38,6 +44,9 @@ ROUTING_SCENARIOS = [
     ("Turn this Pingouin table into APA Chinese prose.", "pg-reporting"),
     ("Approve this analysis before I report it.", "pg-analysis-approval"),
     ("I uploaded data but do not know if it is long or wide.", "pg-data-screening"),
+    ("Compare two groups on a skewed outcome with small n using a rank test.", "pg-nonparametric"),
+    ("Is therapy type associated with relapse yes or no?", "pg-categorical"),
+    ("Give me the Bayes factor for this group difference.", "pg-bayesian"),
 ]
 
 
@@ -165,6 +174,59 @@ def test_reliability_power() -> None:
     ])
 
 
+def test_nonparametric() -> None:
+    rng = _rng()
+    x = rng.normal(0.2, 1.0, 30)
+    y = rng.normal(0.8, 1.1, 30)
+    _assert_frame(pg.mwu(x, y))
+    _assert_frame(pg.wilcoxon(x, y))
+
+    df = pd.DataFrame({
+        "score": np.r_[x, y, rng.normal(1.2, 1.0, 30)],
+        "group": np.repeat(["A", "B", "C"], 30),
+    })
+    _assert_frame(pg.kruskal(data=df, dv="score", between="group"))
+
+    ids = np.arange(20)
+    rm = pd.DataFrame({
+        "id": np.repeat(ids, 3),
+        "cond": np.tile(["t1", "t2", "t3"], len(ids)),
+    })
+    rm["score"] = rng.normal(0, 1, len(rm)) + rm["cond"].map({"t1": 0, "t2": 0.2, "t3": 0.5}).to_numpy()
+    _assert_frame(pg.friedman(data=rm, dv="score", within="cond", subject="id"))
+    rm["passed"] = (rng.random(len(rm)) > 0.5).astype(int)
+    _assert_frame(pg.cochran(data=rm, dv="passed", within="cond", subject="id"))
+
+
+def test_categorical() -> None:
+    rng = _rng()
+    df = pd.DataFrame({
+        "group": rng.choice(["A", "B", "C"], 150),
+        "response": rng.choice(["yes", "no"], 150),
+    })
+    _expected, _observed, stats = pg.chi2_independence(data=df, x="group", y="response")
+    _assert_frame(stats)
+
+    paired = pd.DataFrame({
+        "before": rng.integers(0, 2, 80),
+        "after": rng.integers(0, 2, 80),
+    })
+    _obs, mcnemar = pg.chi2_mcnemar(data=paired, x="before", y="after")
+    _assert_frame(mcnemar)
+
+    _assert_finite(pg.power_chi2(dof=1, w=0.3, n=100, alpha=0.05))
+
+
+def test_bayesian() -> None:
+    rng = _rng()
+    x = rng.normal(0.2, 1.0, 30)
+    y = rng.normal(0.8, 1.0, 30)
+    tt = pg.ttest(x, y)
+    _assert_finite(pg.bayesfactor_ttest(float(tt["T"].iloc[0]), 30, 30))
+    _assert_finite(pg.bayesfactor_pearson(0.3, 60))
+    _assert_finite(pg.bayesfactor_binom(55, 100, 0.5))
+
+
 def test_static_budget(max_skill_bytes: int) -> None:
     skill_files = sorted((PLUGIN_ROOT / "skills").glob("*/SKILL.md"))
     too_large = [(path.name, path.stat().st_size) for path in skill_files if path.stat().st_size > max_skill_bytes]
@@ -211,6 +273,9 @@ TESTS: list[tuple[str, Callable[[], None]]] = [
     ("correlations", test_correlations),
     ("regression_mediation", test_regression_mediation),
     ("reliability_power", test_reliability_power),
+    ("nonparametric", test_nonparametric),
+    ("categorical", test_categorical),
+    ("bayesian", test_bayesian),
     ("routing_matrix", test_routing_matrix),
     ("main_entry_contract", test_main_entry_contract),
 ]

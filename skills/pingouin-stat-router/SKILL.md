@@ -5,7 +5,7 @@ description: Route psychology statistics requests to the smallest Pingouin workf
 
 # Pingouin Stat Router
 
-Compatibility entry point. For end-to-end work, prefer `pingouin-stat`, which adds intake, approval, and deliverable planning before and after routing.
+Compatibility entry point. For end-to-end work, prefer `pingouin-stat` (adds intake, approval, and deliverable planning around routing).
 
 Use this skill first when the requested statistical analysis is unclear or broad.
 
@@ -44,6 +44,9 @@ If these cannot be inferred, ask the minimum necessary clarifying question. If a
 - One-way/factorial ANOVA, repeated-measures ANOVA, mixed ANOVA, Welch ANOVA, ANCOVA -> `pg-anova`.
 - Pearson/Spearman/Kendall, partial correlation, pairwise correlation, repeated-measures correlation -> `pg-correlations`.
 - Linear regression, logistic regression, mediation -> `pg-regression-mediation`.
+- Ordinal / non-normal outcomes, rank tests -> `pg-nonparametric`.
+- Categorical / contingency, chi-square / McNemar -> `pg-categorical`.
+- Bayes factors (t, r, proportion) -> `pg-bayesian`.
 - Cronbach alpha, ICC, inter-rater reliability -> `pg-reliability`.
 - Sample size, achieved power, detectable effect -> `pg-power`.
 - APA/Chinese result prose, polished tables, result interpretation -> `pg-reporting`.
