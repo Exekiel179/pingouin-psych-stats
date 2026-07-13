@@ -275,6 +275,43 @@ TEMPLATES = {
         bf = pg.bayesfactor_pearson(r=0.30, n=60)
         print({"BF10": round(float(bf), 3)})
     """,
+    "outliers": """
+        import pandas as pd
+        import pingouin as pg
+
+        df = pd.read_csv("data.csv")
+        mask = pg.madmedianrule(df["score"].to_numpy())   # True = flagged outlier
+        print({"n_outliers": int(mask.sum())})
+        print(df.loc[mask])
+    """,
+    "qqplot": """
+        import pandas as pd
+        import matplotlib.pyplot as plt
+        import pingouin as pg
+
+        df = pd.read_csv("data.csv")
+        pg.qqplot(df["score"], dist="norm")
+        plt.savefig("qqplot.png", dpi=150, bbox_inches="tight")
+    """,
+    "hotelling": """
+        import pandas as pd
+        import pingouin as pg
+
+        df = pd.read_csv("data.csv")
+        dvs = ["v1", "v2", "v3"]
+        X = df.loc[df["group"].eq("A"), dvs].to_numpy()
+        Y = df.loc[df["group"].eq("B"), dvs].to_numpy()
+        res = pg.multivariate_ttest(X, Y).round(3)
+        pg.print_table(res)
+    """,
+    "box-m": """
+        import pandas as pd
+        import pingouin as pg
+
+        df = pd.read_csv("data.csv")
+        res = pg.box_m(df, dvs=["v1", "v2", "v3"], group="group").round(3)
+        pg.print_table(res)
+    """,
 }
 
 

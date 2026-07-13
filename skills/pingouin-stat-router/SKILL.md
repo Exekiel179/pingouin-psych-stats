@@ -39,17 +39,18 @@ If these cannot be inferred, ask the minimum necessary clarifying question. If a
 
 ## Routing
 
-- Data quality, missingness, assumptions, reshape, or column inspection -> `pg-data-screening`.
-- One-sample, independent, paired, Welch, or pairwise group comparisons -> `pg-mean-tests`.
-- One-way/factorial ANOVA, repeated-measures ANOVA, mixed ANOVA, Welch ANOVA, ANCOVA -> `pg-anova`.
-- Pearson/Spearman/Kendall, partial correlation, pairwise correlation, repeated-measures correlation -> `pg-correlations`.
-- Linear regression, logistic regression, mediation -> `pg-regression-mediation`.
+- Data quality, missingness, assumptions, reshape, outliers -> `pg-data-screening`.
+- One/two/paired/Welch/pairwise mean comparisons -> `pg-mean-tests`.
+- ANOVA family: one-way, factorial, RM, mixed, Welch, ANCOVA -> `pg-anova`.
+- Correlation: Pearson/Spearman/Kendall, partial, pairwise, repeated -> `pg-correlations`.
+- Linear/logistic regression, mediation -> `pg-regression-mediation`.
 - Ordinal / non-normal outcomes, rank tests -> `pg-nonparametric`.
 - Categorical / contingency, chi-square / McNemar -> `pg-categorical`.
+- Several DVs together, Hotelling's T-squared -> `pg-multivariate`.
 - Bayes factors (t, r, proportion) -> `pg-bayesian`.
 - Cronbach alpha, ICC, inter-rater reliability -> `pg-reliability`.
 - Sample size, achieved power, detectable effect -> `pg-power`.
-- APA/Chinese result prose, polished tables, result interpretation -> `pg-reporting`.
+- APA/Chinese result prose, polished tables -> `pg-reporting`.
 
 ## Output Format
 

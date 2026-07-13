@@ -83,9 +83,25 @@ Notes:
 pg.normality(data=df, dv="score", group="group")
 pg.homoscedasticity(data=df, dv="score", group="group")
 pg.sphericity(data=df, dv="score", within="condition", subject="id")
+pg.madmedianrule(df["score"].to_numpy())          # robust outlier mask (True = outlier)
+pg.qqplot(df["score"], dist="norm")               # normality Q-Q plot (needs matplotlib)
 ```
 
 Use assumption checks as diagnostics, not mechanical pass/fail gates. For large samples, small deviations can be significant.
+
+## Multivariate
+
+```python
+pg.multivariate_ttest(X, Y=None, paired=False)       # Hotelling's T-squared; X, Y are (n, k)
+pg.box_m(df, dvs=["v1", "v2", "v3"], group="group")   # equality of covariance matrices
+pg.multivariate_normality(df[["v1", "v2", "v3"]], alpha=0.05)   # Henze-Zirkler
+```
+
+Notes:
+
+- `multivariate_ttest` returns index `hotelling` with `T2`, `F`, `df1`, `df2`, `pval`.
+- `box_m` returns `Chi2`, `df`, `pval`, `equal_cov`; `multivariate_normality` returns `(hz, pval, normal)`.
+- Needs n greater than the number of DVs; Pingouin does not cover full factorial MANOVA.
 
 ## Correlations
 

@@ -15,6 +15,7 @@ Use these prompts to forward-test routing and supervision without leaking expect
 | Is therapy type associated with relapse (yes/no)? | `pg-categorical` | S0 R x C, chi-square, Cramér's V |
 | Did symptom presence change from pre to post in the same patients? | `pg-categorical` | S0 paired binary, McNemar |
 | How strong is the Bayesian evidence for the group difference? | `pg-bayesian` | S4 BF10, prior scale |
+| Compare two groups on three symptom subscales at once. | `pg-multivariate` | S0 multiple DVs, S3 Box's M / MV normality |
 | Estimate reliability for a six-item resilience scale. | `pg-reliability` | S1 item columns, S5 alpha caveat |
 | Three clinicians rated the same interviews; compute inter-rater reliability. | `pg-reliability` | S0 ICC model, S1 target-rater pairs |
 | How many participants do I need for r = .30, 80% power? | `pg-power` | S0 alpha/power defaults |

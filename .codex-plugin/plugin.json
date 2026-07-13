@@ -21,7 +21,7 @@
   "interface": {
     "displayName": "Pingouin Psych Stats",
     "shortDescription": "Safer Pingouin workflows for psychology researchers",
-    "longDescription": "A local skill plugin (for Claude Code, Codex, and other AI agents) that routes psychology statistics requests into compact Pingouin workflows: data screening, t tests, ANOVA, correlations, regression, mediation, non-parametric tests, contingency/chi-square tests, Bayesian tests, reliability, power analysis, and APA-style result reporting. It emphasizes assumption checks, correct function selection, reproducible Python snippets, explicit uncertainty, and polished tables instead of ad hoc statistical prose.",
+    "longDescription": "A local skill plugin (for Claude Code, Codex, and other AI agents) that routes psychology statistics requests into compact Pingouin workflows: data screening, t tests, ANOVA, correlations, regression, mediation, non-parametric tests, contingency/chi-square tests, Bayesian tests, multivariate comparisons, reliability, power analysis, and APA-style result reporting. It emphasizes assumption checks, correct function selection, reproducible Python snippets, explicit uncertainty, and polished tables instead of ad hoc statistical prose.",
     "developerName": "Local Research Tools",
     "category": "Research",
     "capabilities": [

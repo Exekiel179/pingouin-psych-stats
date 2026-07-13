@@ -28,6 +28,9 @@ EXPECTED_SIGNATURE_BITS = {
     "chi2_independence": ["correction"],
     "power_chi2": ["dof", "w", "power"],
     "bayesfactor_ttest": ["paired", "r"],
+    "multivariate_ttest": ["X", "Y", "paired"],
+    "box_m": ["dvs", "group"],
+    "madmedianrule": ["a"],
 }
 
 ROUTING_SCENARIOS = [
@@ -47,6 +50,7 @@ ROUTING_SCENARIOS = [
     ("Compare two groups on a skewed outcome with small n using a rank test.", "pg-nonparametric"),
     ("Is therapy type associated with relapse yes or no?", "pg-categorical"),
     ("Give me the Bayes factor for this group difference.", "pg-bayesian"),
+    ("Compare two groups on three symptom subscales together.", "pg-multivariate"),
 ]
 
 
@@ -227,6 +231,24 @@ def test_bayesian() -> None:
     _assert_finite(pg.bayesfactor_binom(55, 100, 0.5))
 
 
+def test_multivariate() -> None:
+    rng = _rng()
+    x = rng.normal(0.0, 1.0, (40, 3))
+    y = rng.normal(0.5, 1.0, (45, 3))
+    _assert_frame(pg.multivariate_ttest(x, y))
+
+    df = pd.DataFrame(np.vstack([x, y]), columns=["v1", "v2", "v3"])
+    df["group"] = ["A"] * 40 + ["B"] * 45
+    _assert_frame(pg.box_m(df, dvs=["v1", "v2", "v3"], group="group"))
+
+    hz = pg.multivariate_normality(x, alpha=0.05)
+    _assert_finite(hz.pval)
+
+    flags = pg.madmedianrule(df["v1"].to_numpy())
+    if flags.dtype != bool:
+        raise AssertionError("madmedianrule should return a boolean mask")
+
+
 def test_static_budget(max_skill_bytes: int) -> None:
     skill_files = sorted((PLUGIN_ROOT / "skills").glob("*/SKILL.md"))
     too_large = [(path.name, path.stat().st_size) for path in skill_files if path.stat().st_size > max_skill_bytes]
@@ -276,6 +298,7 @@ TESTS: list[tuple[str, Callable[[], None]]] = [
     ("nonparametric", test_nonparametric),
     ("categorical", test_categorical),
     ("bayesian", test_bayesian),
+    ("multivariate", test_multivariate),
     ("routing_matrix", test_routing_matrix),
     ("main_entry_contract", test_main_entry_contract),
 ]

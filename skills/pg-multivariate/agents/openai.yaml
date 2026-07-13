@@ -1,0 +1,7 @@
+interface:
+  display_name: "PG Multivariate"
+  short_description: "Hotelling's T-squared, Box's M, multivariate normality"
+  brand_color: "#1F7665"
+  default_prompt: "Use $pg-multivariate for Hotelling's T-squared and multivariate assumption checks."
+policy:
+  allow_implicit_invocation: true

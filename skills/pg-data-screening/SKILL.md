@@ -59,6 +59,17 @@ For repeated-measures sphericity:
 pg.sphericity(data=df, dv="score", within="condition", subject="id")
 ```
 
+For robust outliers (MAD-median rule) and a normality Q-Q plot:
+
+```python
+mask = pg.madmedianrule(df["score"].to_numpy())   # True = flagged outlier
+print({"n_outliers": int(mask.sum())})
+
+import matplotlib.pyplot as plt                    # qqplot needs matplotlib
+pg.qqplot(df["score"], dist="norm")
+plt.savefig("qqplot.png", dpi=150, bbox_inches="tight")
+```
+
 ## Reporting
 
 Report:
@@ -76,4 +87,5 @@ Report:
 - If repeated measures exist, never analyze rows as independent.
 - If IDs repeat unexpectedly within a condition, stop and flag the design/data issue.
 - If transformations or exclusions are proposed, state whether they were planned or post hoc.
+- Flag outliers with a rule chosen in advance (e.g. MAD-median); never delete points silently.
 - End with a compact audit line using S0-S5 gate codes.
