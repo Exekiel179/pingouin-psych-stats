@@ -1,0 +1,7 @@
+interface:
+  display_name: "PG Workflow"
+  short_description: "Run a stateful, auditable Pingouin analysis"
+  brand_color: "#1F7665"
+  default_prompt: "Use $pg-workflow to run or resume my Pingouin psychology analysis workflow."
+policy:
+  allow_implicit_invocation: true

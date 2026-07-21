@@ -33,6 +33,8 @@ For a resumable analysis, use them in this order: `/pg-intake` → `/pg-screen` 
 
 The sequence is enforced by `scripts/workflow_engine.py`, which validates artifact prerequisites, records state history, and captures Python/Pingouin/plugin environment metadata in each run manifest.
 
+For a platform-neutral entry point, invoke `pg-workflow`. It uses the same state machine and archive contract without requiring Claude Code slash commands; `/pg-*` commands are the Claude Code convenience surface.
+
 ---
 
 ## English

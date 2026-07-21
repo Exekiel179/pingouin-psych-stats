@@ -8,6 +8,7 @@ Use this file before loading the longer API quick reference.
 
 | User intent | Skill | Pingouin functions |
 | --- | --- | --- |
+| run/resume the complete stateful workflow with archive and approval gates | `pg-workflow` | dispatches the stages below |
 | end-to-end psychology analysis with intake, routing, approval, reporting | `pingouin-stat` | routes to selected functions |
 | inspect dataset, missingness, assumptions, reshape, outliers | `pg-data-screening` | `normality`, `homoscedasticity`, `sphericity`, `madmedianrule`, `qqplot` |
 | compare means between one/two/many conditions | `pg-mean-tests` | `ttest`, `pairwise_tests` |

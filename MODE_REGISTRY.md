@@ -8,6 +8,7 @@ Update this file before adding a command, changing a trigger, or changing the de
 | Entry | Mode | Trigger examples | Output |
 |---|---|---|---|
 | `pingouin-stat` | `full` | `pingouin-stat`, "分析这份心理学数据" | Full workflow; use sequential commands for resumable runs |
+| `pg-workflow` | `orchestrate` | "运行完整 Pingouin 工作流", "继续上次分析" | Cross-platform stateful orchestration |
 | `pingouin-stat-router` | `route` | `/pg-method`, "该用什么统计方法", "选择 Pingouin 分析" | Recommended skill, required inputs, one guardrail, audit status |
 | `pg-data-screening` | `screen` | "先筛查数据", "检查缺失和假设" | Data shape, missingness, assumptions, reshape advice |
 | `pg-reporting` | `report` | "写成 APA 结果", "把表格转成中文结果" | APA table/prose from existing output |

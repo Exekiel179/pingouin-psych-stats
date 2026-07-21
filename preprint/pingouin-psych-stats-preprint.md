@@ -18,7 +18,7 @@ Psychology statistics workflows require coordinated decisions about study design
 
 ## Implementation Snapshot
 
-本稿对应插件 manifest 版本 `0.1.0+codex.20260622073355`，以仓库 `main` 分支当前实现为准。当前仓库包含 15 个 skill 和 7 个公开命令：6 个命令组成可恢复主流程，`/pg-method` 作为可选方法分流入口。工作流状态由 `scripts/workflow_engine.py` 执行并验证，run manifest 同时记录 Python、Pingouin 和插件版本。下文的工程验证、功能描述和文件路径均以本次更新后的实现为准。
+本稿对应插件 manifest 版本 `0.1.0+codex.20260622073355`，以仓库 `main` 分支当前实现为准。当前仓库包含 16 个 skill 和 7 个公开命令：`pg-workflow` 是跨平台编排入口，6 个命令组成 Claude Code 的可恢复主流程，`/pg-method` 作为可选方法分流入口。工作流状态由 `scripts/workflow_engine.py` 执行并验证，run manifest 同时记录 Python、Pingouin 和插件版本。下文的工程验证、功能描述和文件路径均以本次更新后的实现为准。
 
 ## 1 引言
 
@@ -32,7 +32,7 @@ Psychology statistics workflows require coordinated decisions about study design
 
 ### 2.1 插件组成
 
-插件包含 Claude Code 与 Codex manifest、15 个 skill、references 规则库、Python scripts、命令入口和 benchmark 目录。skill 分为四层：入口与路由（`pingouin-stat`、`pingouin-stat-router`），数据与基础检验（`pg-data-screening`、`pg-mean-tests`、`pg-anova`、`pg-correlations`），扩展分析（回归/中介、非参数、分类、贝叶斯、多元、信度、效能），以及审批与报告（`pg-analysis-approval`、`pg-reporting`）。
+插件包含 Claude Code 与 Codex manifest、16 个 skill、references 规则库、Python scripts、命令入口和 benchmark 目录。`pg-workflow` 是跨平台编排入口；其他 skill 分为入口与路由、数据与基础检验、扩展分析以及审批与报告四层。
 
 每个 skill 的 frontmatter 只承担触发与发现功能；具体流程在 `SKILL.md` 中定义，API 速查、APA 模板、监督关卡和 Pingouin 优化规则则按需从 references 加载。这个分层减少了无关上下文进入普通分析，并把 benchmark 和测试脚本排除在用户分析上下文之外。
 

@@ -29,6 +29,8 @@ def main() -> None:
         ROOT / "archive" / "README.md",
         ROOT / "scripts" / "init_analysis_run.py",
         ROOT / "scripts" / "workflow_engine.py",
+        ROOT / "skills" / "pg-workflow" / "SKILL.md",
+        ROOT / "skills" / "pg-workflow" / "agents" / "openai.yaml",
     ]
     required_dirs = [ROOT / "archive" / "analysis-runs", ROOT / "archive" / "templates"]
     missing = [str(path.relative_to(ROOT)) for path in required_files if not path.is_file()]
