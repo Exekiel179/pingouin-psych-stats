@@ -28,6 +28,7 @@ def main() -> None:
         ROOT / "references" / "pingouin-optimization.md",
         ROOT / "archive" / "README.md",
         ROOT / "scripts" / "init_analysis_run.py",
+        ROOT / "scripts" / "workflow_engine.py",
     ]
     required_dirs = [ROOT / "archive" / "analysis-runs", ROOT / "archive" / "templates"]
     missing = [str(path.relative_to(ROOT)) for path in required_files if not path.is_file()]

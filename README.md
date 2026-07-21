@@ -31,6 +31,8 @@ Available Claude Code commands:
 
 For a resumable analysis, use them in this order: `/pg-intake` → `/pg-screen` → `/pg-analyze` → `/pg-approve` → `/pg-report` → `/pg-archive`. `/pg-method` is an optional method-selection helper before intake.
 
+The sequence is enforced by `scripts/workflow_engine.py`, which validates artifact prerequisites, records state history, and captures Python/Pingouin/plugin environment metadata in each run manifest.
+
 ---
 
 ## English

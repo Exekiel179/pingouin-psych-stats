@@ -33,6 +33,7 @@ Load references only for the current task:
 ### Tier 3: Execution-only resources (do not narrate by default)
 
 - `scripts/` are deterministic helpers and quality checks.
+- `scripts/workflow_engine.py` is the execution boundary for run state; agents should use it rather than editing manifests directly.
 - `assets/` are reusable output assets.
 - `benchmark/` prompts, fixtures, and scores are evaluation material, not evidence for a user's data.
 

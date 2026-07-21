@@ -7,6 +7,7 @@ import argparse
 import inspect
 import json
 import sys
+import tempfile
 from pathlib import Path
 from typing import Callable
 
@@ -305,6 +306,44 @@ def test_plugin_surface() -> None:
         raise AssertionError(completed.stdout + completed.stderr)
 
 
+def test_workflow_engine() -> None:
+    """Exercise the archive state machine without touching a real run."""
+    import subprocess
+
+    engine = PLUGIN_ROOT / "scripts" / "workflow_engine.py"
+    with tempfile.TemporaryDirectory() as tmp:
+        run = Path(tmp)
+        for name in ("results", "reports", "figures"):
+            (run / name).mkdir()
+        manifest = {"run_id": "quality-check", "status": "initialized", "history": []}
+        (run / "run-manifest.json").write_text(json.dumps(manifest), encoding="utf-8")
+
+        def advance(target: str) -> None:
+            result = subprocess.run(
+                [sys.executable, str(engine), "advance", str(run), target],
+                capture_output=True,
+                text=True,
+                check=False,
+            )
+            if result.returncode:
+                raise AssertionError(result.stdout + result.stderr)
+
+        advance("intake_complete")
+        (run / "screening.json").write_text('{"rows": 4}\n', encoding="utf-8")
+        advance("screened")
+        (run / "analysis.py").write_text("import pingouin as pg\n", encoding="utf-8")
+        (run / "results" / "main.csv").write_text("stat,p\n1.0,0.5\n", encoding="utf-8")
+        advance("analyzed")
+        (run / "audit.md").write_text("Decision: APPROVED\n", encoding="utf-8")
+        advance("approved")
+        (run / "reports" / "results.md").write_text("Report\n", encoding="utf-8")
+        advance("reported")
+        advance("complete")
+        final = json.loads((run / "run-manifest.json").read_text(encoding="utf-8"))
+        if final["status"] != "complete" or len(final["history"]) != 6:
+            raise AssertionError(f"unexpected workflow state: {final}")
+
+
 TESTS: list[tuple[str, Callable[[], None]]] = [
     ("signatures", test_signatures),
     ("mean_tests", test_mean_tests),
@@ -319,6 +358,7 @@ TESTS: list[tuple[str, Callable[[], None]]] = [
     ("routing_matrix", test_routing_matrix),
     ("main_entry_contract", test_main_entry_contract),
     ("plugin_surface", test_plugin_surface),
+    ("workflow_engine", test_workflow_engine),
 ]
 
 

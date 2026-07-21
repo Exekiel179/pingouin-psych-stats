@@ -10,6 +10,8 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
+from workflow_engine import environment_snapshot
+
 
 ROOT = Path(__file__).resolve().parents[1]
 ARCHIVE = ROOT / "archive" / "analysis-runs"
@@ -41,6 +43,8 @@ def main() -> None:
         "input_reference": args.input_ref,
         "raw_data_copied": False,
         "status": "initialized",
+        "history": [{"from": None, "to": "initialized", "at": datetime.now(timezone.utc).isoformat()}],
+        "environment": environment_snapshot(),
         "plugin_root": str(ROOT),
     }
     (run_dir / "analysis.py").write_text("# Add the exact reproducible Pingouin analysis code here.\n", encoding="utf-8")

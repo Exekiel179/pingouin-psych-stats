@@ -14,7 +14,7 @@ archive/analysis-runs/<YYYYMMDD-HHMMSS>-<short-slug>/
 ├── reports/                # APA/Chinese/English prose and tables
 ├── figures/                # plotting code and rendered figures
 ├── audit.md                # S0–S5 approval decision and caveats
-└── run-manifest.json       # metadata, input reference, versions, timestamps
+└── run-manifest.json       # metadata, input reference, versions, timestamps, state history
 ```
 
 Use `scripts/init_analysis_run.py` to create the structure and manifest. The run id is the directory name and must not be reused.
@@ -23,6 +23,7 @@ Use `scripts/init_analysis_run.py` to create the structure and manifest. The run
 
 - Record the input path or data-frame identifier, but do not copy raw participant data by default.
 - Record Python, Pingouin, and plugin versions when available.
+- Keep the manifest state history; use `scripts/workflow_engine.py` for transitions instead of editing status by hand.
 - Save the exact generated code before interpretation.
 - Save numerical output before writing report prose.
 - Save the S0–S5 decision, unresolved issues, and approval label.
