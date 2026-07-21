@@ -13,6 +13,7 @@ Read:
 
 - `../../references/supervision-gates.md`
 - `../../references/pingouin-api-quickref.md`
+- `../../references/pingouin-optimization.md`
 - `../../references/apa-output-template.md` if writing results.
 
 ## Decision Rules

@@ -1,5 +1,7 @@
 # Workflow Index
 
+This is the compact routing index. For public entry points, command aliases, and loading boundaries, read `../MODE_REGISTRY.md` and `exposure-policy.md` first.
+
 Use this file before loading the longer API quick reference.
 
 ## Fast Routing

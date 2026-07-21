@@ -6,6 +6,31 @@
 
 **License:** MIT · **Plugin type:** Skill plugin for Claude Code, Codex & other AI agents · **Source of truth:** https://pingouin-stats.org/
 
+## Plugin surface and loading
+
+The plugin follows progressive disclosure so the default context stays small:
+
+- **Public discovery:** plugin manifests, skill descriptions, and `/pg-*` commands.
+- **Selected workflow:** only the triggered `SKILL.md` is loaded.
+- **Conditional guidance:** intake, routing, API, APA, and S0-S5 references are loaded only when needed.
+- **Execution-only resources:** scripts and benchmark fixtures are not ordinary analysis context.
+
+The public entry points and command-to-skill mapping are maintained in [`MODE_REGISTRY.md`](MODE_REGISTRY.md). The detailed policy is in [`references/exposure-policy.md`](references/exposure-policy.md).
+
+Available Claude Code commands:
+
+| Command | Purpose |
+| --- | --- |
+| `/pg-intake` | Start a run and clarify design inputs |
+| `/pg-method` | Choose the smallest valid method workflow |
+| `/pg-screen` | Data screening before analysis |
+| `/pg-analyze` | Execute the selected Pingouin analysis |
+| `/pg-approve` | S0-S5 analysis approval |
+| `/pg-report` | APA table or result prose from existing output |
+| `/pg-archive` | Finalize the run archive |
+
+For a resumable analysis, use them in this order: `/pg-intake` → `/pg-screen` → `/pg-analyze` → `/pg-approve` → `/pg-report` → `/pg-archive`. `/pg-method` is an optional method-selection helper before intake.
+
 ---
 
 ## English

@@ -14,6 +14,8 @@ Read:
 - `../../references/supervision-gates.md`
 - `../../references/apa-output-template.md`
 - `../../references/pingouin-api-quickref.md`
+- `../../references/archive-contract.md` when the result is part of an analysis run.
+- `../../references/pingouin-optimization.md` when inspecting result columns or corrections.
 
 ## Inputs
 
@@ -32,6 +34,7 @@ If no numeric results are available, generate a fill-in template and refuse to i
 3. Create a compact Markdown table.
 4. Write APA-style prose in the requested language.
 5. Add assumption and limitation notes.
+6. Save the report under the active run's `reports/` directory and record its source result file.
 
 ## Output Style
 

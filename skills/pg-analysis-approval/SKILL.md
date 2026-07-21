@@ -14,6 +14,7 @@ Read:
 - `../../references/supervision-gates.md`
 - `../../references/workflow-index.md`
 - `../../references/apa-output-template.md` if checking report prose.
+- `../../references/archive-contract.md` when reviewing an archived run.
 
 Read `../../references/pingouin-api-quickref.md` only if an API/function choice is questionable.
 
@@ -39,6 +40,7 @@ Check:
 - S4 Result: values come from output; df, p, CI, effect size, correction are present when needed.
 - S5 Interpretation: no unsupported causal, clinical, or construct-level overclaim.
 - Deliverable: requested format, language, tables, figures, and reproducibility needs are addressed.
+- Archive: exact code, numerical output, report source, and audit record are stored under one run directory.
 
 ## Decision Labels
 

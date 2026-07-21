@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 import inspect
 import json
+import sys
 from pathlib import Path
 from typing import Callable
 
@@ -288,6 +289,22 @@ def test_main_entry_contract() -> None:
         raise AssertionError(f"pg-analysis-approval missing labels/gates: {missing_approval}")
 
 
+def test_plugin_surface() -> None:
+    """Keep public commands, registry, and exposure policy in sync."""
+    import subprocess
+
+    check = PLUGIN_ROOT / "scripts" / "check_plugin_surface.py"
+    completed = subprocess.run(
+        [sys.executable, str(check)],
+        cwd=PLUGIN_ROOT,
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+    if completed.returncode:
+        raise AssertionError(completed.stdout + completed.stderr)
+
+
 TESTS: list[tuple[str, Callable[[], None]]] = [
     ("signatures", test_signatures),
     ("mean_tests", test_mean_tests),
@@ -301,6 +318,7 @@ TESTS: list[tuple[str, Callable[[], None]]] = [
     ("multivariate", test_multivariate),
     ("routing_matrix", test_routing_matrix),
     ("main_entry_contract", test_main_entry_contract),
+    ("plugin_surface", test_plugin_surface),
 ]
 
 

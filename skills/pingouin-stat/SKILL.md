@@ -15,6 +15,10 @@ Read in order:
 2. `../../references/workflow-index.md`
 3. `../../references/supervision-gates.md`
 
+Read `../../references/archive-contract.md` before generating code or a deliverable that must be reproducible.
+Read `../../references/workflow-contract.md` for a resumable multi-command run.
+Read `../../references/pingouin-optimization.md` before generating concrete Pingouin code.
+
 Read `../../references/pingouin-api-quickref.md` only when generating code. Read `../../references/apa-output-template.md` only when writing final prose or tables.
 
 ## Workflow
@@ -25,6 +29,7 @@ Read `../../references/pingouin-api-quickref.md` only when generating code. Read
 4. Analyze: call the selected analysis workflow or generate the relevant Pingouin code.
 5. Approve: run `pg-analysis-approval` before final interpretation.
 6. Organize: use `pg-reporting` to produce the requested deliverable shape.
+7. Archive: initialize a run under `archive/analysis-runs/`, save the exact code and numerical outputs, then write the report and S0–S5 audit record.
 
 ## Intake Contract
 
@@ -72,3 +77,4 @@ Final result should include only the sections that fit the user's requested form
 - Do not invent results when no data/output exists.
 - Do not force Pingouin onto designs requiring mixed-effects models, SEM, count models, survival analysis, or complex survey models.
 - Use short S0-S5 audit codes by default; expand only failed gates or user-requested rationale.
+- Do not finish a code-generating run without saving the code, output references, and audit record under one archive run directory.

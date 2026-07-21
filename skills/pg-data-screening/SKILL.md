@@ -13,6 +13,8 @@ Read:
 
 - `../../references/supervision-gates.md`
 - `../../references/pingouin-api-quickref.md`
+- `../../references/pingouin-optimization.md`
+- `../../references/archive-contract.md` when running inside an archive.
 
 ## Workflow
 
