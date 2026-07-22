@@ -4,6 +4,8 @@
 >
 > 一个把心理学统计需求路由到 [Pingouin](https://pingouin-stats.org/) 工作流的技能插件，支持 Claude Code、Codex 等。
 
+For the current step-by-step tutorial, see [`TUTORIAL.md`](TUTORIAL.md). The canonical one-click entry is `/pg-workflow` in Claude Code or `$pg-workflow` in Codex.
+
 ---
 
 ## English
@@ -70,7 +72,7 @@ For designs needing mixed-effects models, SEM, multilevel mediation, count model
 ### 6. Local dev / tests
 
 ```
-python scripts/run_skill_quality_checks.py     # run quality checks (13 checks)
+python scripts/run_skill_quality_checks.py     # run quality checks (15 checks)
 python scripts/pingouin_template.py anova       # print a code template for one analysis
 ```
 
@@ -140,6 +142,6 @@ git clone https://github.com/Exekiel179/pingouin-psych-stats.git
 ### 6. 本地改代码 / 跑测试
 
 ```
-python scripts/run_skill_quality_checks.py     # 跑质量检查（13 项）
+python scripts/run_skill_quality_checks.py     # 跑质量检查（15 项）
 python scripts/pingouin_template.py anova       # 打印某分析的代码模板
 ```
