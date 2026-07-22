@@ -55,6 +55,7 @@ The plugin emphasizes:
 
 | Skill | Purpose | Key Pingouin functions |
 | --- | --- | --- |
+| `pg-workflow` | **Cross-platform orchestrator.** Resume the stateful intake → screen → analyze → approve → report → archive workflow. | dispatches the stages below |
 | `pingouin-stat` | **Main entry point.** End-to-end: intake → routing → screening → analysis → approval → reporting. | routes to the functions below |
 | `pingouin-stat-router` | Lightweight router: pick the smallest workflow and required variables. | — |
 | `pg-data-screening` | Inspect data shape, missingness, assumptions, reshape. | `normality`, `homoscedasticity`, `sphericity` |
@@ -93,9 +94,12 @@ pingouin-psych-stats/
 ├── .claude-plugin/plugin.json      # Claude Code plugin manifest
 ├── .claude-plugin/marketplace.json # Claude Code marketplace entry (installable via /plugin)
 ├── .codex-plugin/plugin.json       # Codex plugin manifest (name, skills path, interface)
-├── skills/                     # The 15 skills above (each a SKILL.md + agents/openai.yaml)
+├── skills/                     # The 16 skills above (each a SKILL.md + optional agents/openai.yaml)
 ├── references/                 # Routing index, supervision gates, API quickref, APA template
-├── scripts/                    # pingouin_template.py + skill quality checks
+├── scripts/                    # Templates, workflow engine, archive initializer, quality checks
+├── commands/                   # Claude Code convenience commands (/pg-*)
+├── archive/                    # Per-run code, outputs, reports, figures, and audit records
+├── preprint/                   # System-description manuscript workspace
 └── benchmark/                  # Mini benchmark comparing baseline vs. plugin-guided runs
 ```
 
@@ -112,7 +116,7 @@ This is a skill plugin for AI coding agents (Claude Code, Codex, and others).
 /plugin install pingouin-psych-stats@pingouin-stats
 ```
 
-To try it before pushing, run `/plugin marketplace add ./` from a local checkout of this repo, then the same install line. The 15 skills load automatically and Claude invokes them by task (or name).
+To try it before pushing, run `/plugin marketplace add ./` from a local checkout of this repo, then the same install line. The 16 skills load automatically and Claude invokes them by task (or name).
 
 **Codex / other agents** — point your agent environment at this directory so it discovers the `skills/` folder (Codex additionally reads the `.codex-plugin/plugin.json` manifest).
 
@@ -157,6 +161,7 @@ Pingouin is the right tool for many psychology designs, but **not all**. The plu
 
 | 技能 | 用途 | 主要 Pingouin 函数 |
 | --- | --- | --- |
+| `pg-workflow` | **跨平台主编排入口。** 恢复并执行信息采集 → 筛查 → 分析 → 审批 → 报告 → 归档。 | 调度下列阶段 |
 | `pingouin-stat` | **主入口。** 端到端流程：信息采集 → 路由 → 数据筛查 → 分析 → 审批 → 报告。 | 路由到下列函数 |
 | `pingouin-stat-router` | 轻量路由：选出最小的工作流与所需变量。 | — |
 | `pg-data-screening` | 检查数据形态、缺失值、假设，并整形。 | `normality`、`homoscedasticity`、`sphericity` |
@@ -225,6 +230,8 @@ pingouin-psych-stats/
 - "用 `pg-reporting` 写出 APA 风格的结果。"
 
 若要完整跑一遍，从 `pingouin-stat` 开始：它会处理信息采集、路由、S0–S5 审批关卡以及最终交付物。
+
+若要运行可暂停、可恢复并自动归档的完整流程，使用 `pg-workflow`。它与 Claude Code 的 `/pg-*` 命令共享同一个状态机和归档契约。
 
 ### 基准测试
 
