@@ -26,14 +26,9 @@ These remain available for explicit routing when the design is known:
 
 | Command | Dispatch |
 |---|---|
-| `/pg-intake` | Start run and resolve design inputs |
-| `/pg-workflow` | Canonical full workflow entry |
 | `/pg-method` | `pingouin-stat-router` method selection |
-| `/pg-screen` | `pg-data-screening` |
-| `/pg-analyze` | Execute selected Pingouin analysis |
 | `/pg-report` | `pg-reporting` |
-| `/pg-approve` | `pg-analysis-approval` |
-| `/pg-archive` | Finalize run artifact checklist |
+| `/pg-workflow` | Canonical full workflow entry |
 
 ## Loading Policy
 
@@ -46,9 +41,9 @@ These remain available for explicit routing when the design is known:
 ## Routing Precedence
 
 1. Explicit command or named skill wins.
-2. For a new/resumable run, follow `/pg-intake` → `/pg-screen` → `/pg-analyze` → `/pg-approve` → `/pg-report` → `/pg-archive`.
+2. For a new/resumable run, invoke `/pg-workflow`; it executes intake → screen → analyze → approve → report → archive internally.
 3. Method-selection uncertainty routes to `pingouin-stat-router` via `/pg-method`.
 4. Known design routes to the smallest specialist skill.
 5. If unit, dependency, outcome scale, or required columns remain unclear, ask one compact clarification before code generation.
 
-For resumable work, follow `references/workflow-contract.md` in order.
+For resumable work, use `pg-workflow`; the stage names in `references/workflow-contract.md` are internal workflow states, not separate public commands.

@@ -43,29 +43,13 @@ Intake → Screen → Analyze → Approve → Report → Archive
 
 插件会先澄清设计，再检查数据形态和假设，选择 Pingouin 函数，保存可运行代码和数值结果，执行 S0–S5 审批，最后生成报告并归档。
 
-## 4. 分阶段使用
+## 4. 其他公开命令
 
-需要手动控制时，按下面顺序执行：
-
-```text
-/pg-intake
-/pg-screen
-/pg-analyze
-/pg-approve
-/pg-report
-/pg-archive
-```
-
-常用单项命令：
+主流程阶段由 `pg-workflow` 内部执行，不需要分别暴露。常用辅助命令：
 
 ```text
 /pg-method
 我有三个独立组，比较抑郁得分，应该用什么检验？
-```
-
-```text
-/pg-screen
-请检查 data/study.csv 的缺失值、异常值、重复 ID 和长宽表结构。
 ```
 
 ```text

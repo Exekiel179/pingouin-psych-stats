@@ -10,13 +10,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 COMMANDS = {
     "pg-workflow.md": "pg-workflow",
-    "pg-intake.md": "pingouin-stat",
-    "pg-analyze.md": "pingouin-stat",
     "pg-method.md": "pingouin-stat-router",
-    "pg-screen.md": "pg-data-screening",
     "pg-report.md": "pg-reporting",
-    "pg-approve.md": "pg-analysis-approval",
-    "pg-archive.md": "archive-contract.md",
 }
 
 

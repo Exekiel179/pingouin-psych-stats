@@ -24,15 +24,10 @@ Available Claude Code commands:
 | Command | Purpose |
 | --- | --- |
 | `/pg-workflow` | **One-click full workflow entry** |
-| `/pg-intake` | Start a run and clarify design inputs |
 | `/pg-method` | Choose the smallest valid method workflow |
-| `/pg-screen` | Data screening before analysis |
-| `/pg-analyze` | Execute the selected Pingouin analysis |
-| `/pg-approve` | S0-S5 analysis approval |
 | `/pg-report` | APA table or result prose from existing output |
-| `/pg-archive` | Finalize the run archive |
 
-For one-click use, run `/pg-workflow`. For manual/resumable control, use `/pg-intake` → `/pg-screen` → `/pg-analyze` → `/pg-approve` → `/pg-report` → `/pg-archive`. `/pg-method` is an optional method-selection helper before intake.
+For one-click use, run `/pg-workflow`. It runs intake → screen → analyze → approve → report → archive internally. Use `/pg-method` before the workflow when the test choice is unclear, or `/pg-report` when you already have stored numerical output.
 
 The sequence is enforced by `scripts/workflow_engine.py`, which validates artifact prerequisites, records state history, and captures Python/Pingouin/plugin environment metadata in each run manifest.
 
@@ -222,7 +217,7 @@ pingouin-psych-stats/
 /plugin install pingouin-psych-stats@pingouin-stats
 ```
 
-想在推送前先试用，可在本仓库的本地副本根目录运行 `/plugin marketplace add ./`，再执行同样的 install 命令。15 个技能会自动加载，Claude 按任务（或名称）调用它们。
+想在推送前先试用，可在本仓库的本地副本根目录运行 `/plugin marketplace add ./`，再执行同样的 install 命令。16 个技能会自动加载，Claude 按任务（或名称）调用它们。
 
 **Codex / 其他智能体** —— 让你的智能体环境指向本目录，使其能发现 `skills/` 文件夹（Codex 会额外读取 `.codex-plugin/plugin.json` 清单）。
 
