@@ -9,6 +9,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 COMMANDS = {
+    "pg-workflow.md": "pg-workflow",
     "pg-intake.md": "pingouin-stat",
     "pg-analyze.md": "pingouin-stat",
     "pg-method.md": "pingouin-stat-router",

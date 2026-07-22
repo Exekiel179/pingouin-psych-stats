@@ -27,6 +27,7 @@ These remain available for explicit routing when the design is known:
 | Command | Dispatch |
 |---|---|
 | `/pg-intake` | Start run and resolve design inputs |
+| `/pg-workflow` | Canonical full workflow entry |
 | `/pg-method` | `pingouin-stat-router` method selection |
 | `/pg-screen` | `pg-data-screening` |
 | `/pg-analyze` | Execute selected Pingouin analysis |

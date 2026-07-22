@@ -21,6 +21,7 @@ Available Claude Code commands:
 
 | Command | Purpose |
 | --- | --- |
+| `/pg-workflow` | **One-click full workflow entry** |
 | `/pg-intake` | Start a run and clarify design inputs |
 | `/pg-method` | Choose the smallest valid method workflow |
 | `/pg-screen` | Data screening before analysis |
@@ -29,7 +30,7 @@ Available Claude Code commands:
 | `/pg-report` | APA table or result prose from existing output |
 | `/pg-archive` | Finalize the run archive |
 
-For a resumable analysis, use them in this order: `/pg-intake` → `/pg-screen` → `/pg-analyze` → `/pg-approve` → `/pg-report` → `/pg-archive`. `/pg-method` is an optional method-selection helper before intake.
+For one-click use, run `/pg-workflow`. For manual/resumable control, use `/pg-intake` → `/pg-screen` → `/pg-analyze` → `/pg-approve` → `/pg-report` → `/pg-archive`. `/pg-method` is an optional method-selection helper before intake.
 
 The sequence is enforced by `scripts/workflow_engine.py`, which validates artifact prerequisites, records state history, and captures Python/Pingouin/plugin environment metadata in each run manifest.
 
