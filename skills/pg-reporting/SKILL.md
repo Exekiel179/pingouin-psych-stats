@@ -16,6 +16,7 @@ Read:
 - `../../references/pingouin-api-quickref.md`
 - `../../references/archive-contract.md` when the result is part of an analysis run.
 - `../../references/pingouin-optimization.md` when inspecting result columns or corrections.
+- `../../references/report-output-contract.md` for manuscript or publication-ready output.
 
 ## Inputs
 
@@ -31,10 +32,11 @@ If no numeric results are available, generate a fill-in template and refuse to i
 
 1. Identify test family and output columns.
 2. Verify sample size, statistic, df, p-value, effect size, CI, and correction columns.
-3. Create a compact Markdown table.
-4. Write APA-style prose in the requested language.
-5. Add assumption and limitation notes.
-6. Save the report under the active run's `reports/` directory and record its source result file.
+3. Create a reader layer: finding summary and polished prose.
+4. Create an evidence layer: titled APA table, assumption notes, corrections, effect sizes, and CIs.
+5. Create a provenance layer: run id, source result, software versions, code path, and S0-S5 audit.
+6. Add explicit limitation notes and separate them from interpretation.
+7. Save the report under the active run's `reports/` directory and record its source result file.
 
 ## Output Style
 
@@ -66,3 +68,4 @@ An independent-samples t test showed that Group A scored higher than Group B, *t
 - Do not infer direction from p-value; use group means or coefficients.
 - If the Pingouin table lacks necessary values, ask for or compute them.
 - End with one compact S0-S5 audit line unless the user requests publication-ready prose only.
+- For manuscript output, use the full section contract instead of returning a chat-style paragraph alone.

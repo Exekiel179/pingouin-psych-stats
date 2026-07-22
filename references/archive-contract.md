@@ -26,6 +26,7 @@ Use `scripts/init_analysis_run.py` to create the structure and manifest. The run
 - Keep the manifest state history; use `scripts/workflow_engine.py` for transitions instead of editing status by hand.
 - Save the exact generated code before interpretation.
 - Save numerical output before writing report prose.
+- Save manuscript/report output with a provenance block; use `archive/templates/report-template.md` when starting from an empty report.
 - Save the S0–S5 decision, unresolved issues, and approval label.
 - Keep reports derived from stored output; never store invented placeholder statistics as final results.
 

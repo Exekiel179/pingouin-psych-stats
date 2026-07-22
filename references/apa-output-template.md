@@ -1,5 +1,7 @@
 # APA Output Template
 
+For manuscript or publication-ready output, use `report-output-contract.md` first. This file supplies the statistical sentence and table rules used inside that larger contract.
+
 Use this file for polished reporting after the analysis code has run.
 
 ## Minimal Result Block
@@ -45,4 +47,3 @@ Recommended columns:
 - Correlation: variables, n, r, CI, p, BF10, power.
 - Regression: predictor, coefficient, SE, statistic, p, CI, model R-squared.
 - Reliability: scale or rater model, estimate, CI, F or p if available.
-

@@ -17,7 +17,7 @@ The plugin follows progressive disclosure so the default context stays small:
 
 The public entry points and command-to-skill mapping are maintained in [`MODE_REGISTRY.md`](MODE_REGISTRY.md). The detailed policy is in [`references/exposure-policy.md`](references/exposure-policy.md).
 
-Start here: [`TUTORIAL.md`](TUTORIAL.md) · Detailed bilingual usage: [`USAGE.md`](USAGE.md)
+Start here: [`TUTORIAL.md`](TUTORIAL.md) · Detailed bilingual usage: [`USAGE.md`](USAGE.md) · Publication output: [`references/report-output-contract.md`](references/report-output-contract.md)
 
 Available Claude Code commands:
 
